@@ -12,15 +12,18 @@ p{
     font-family: Barlow, sans-serif;
 }
 
-a{
+a, label{
     font-family: Montserrat,sans-serif;
 }
 
 dd{
     font-family: Montserrat,sans-serif;
-
 }
 
 dt{
     font-family: Barlow, sans-serif;
+}
+
+.font-main{
+    font-family: Montserrat,sans-serif;
 }

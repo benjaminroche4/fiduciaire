@@ -60,6 +60,24 @@ class Contact
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    #[ORM\Column(length: 15, nullable: true)]
+    #[Assert\Length(
+        min: 4,
+        max: 15,
+        minMessage: 'Ce champ doit faire au minimum {{ limit }} caractères',
+        maxMessage: 'Ce champ doit faire au maximum {{ limit }} caractères',
+    )]
+    private ?string $phone = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    #[Assert\Length(
+        min: 2,
+        max: 60,
+        minMessage: 'Ce champ doit faire au minimum {{ limit }} caractères',
+        maxMessage: 'Ce champ doit faire au maximum {{ limit }} caractères',
+    )]
+    private ?string $society = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -145,6 +163,30 @@ class Contact
     public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?string $phone): static
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getSociety(): ?string
+    {
+        return $this->society;
+    }
+
+    public function setSociety(?string $society): static
+    {
+        $this->society = $society;
 
         return $this;
     }

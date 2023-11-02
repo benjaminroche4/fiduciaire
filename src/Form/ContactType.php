@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -40,7 +41,9 @@ class ContactType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('help', TextType::class, [
+            ->add('society')
+            ->add('phone')
+            ->add('help', ChoiceType::class, [
                 'choices'  => [
                     'Création de société' => 'Création de société',
                     'Changement de fiduciaire' => 'Changement de fiduciaire',
@@ -49,6 +52,7 @@ class ContactType extends AbstractType
                     'Autres' => 'Autres',
 
                 ],
+                'placeholder' => 'Faites votre choix...',
                 'constraints' => [
                     new Assert\NotBlank([
                         'message' => 'Ce champ ne ne doit pas être vide.',
