@@ -16,13 +16,84 @@
                     <h3 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos activités</h3>
                     <p class="mt-6 text-lg leading-8 text-gray-600">Nous conseillons nos clients sur l’ensemble des leurs activités autour de trois pôles d’expertises complémentaires.</p>
                     <div class="mt-10 flex flex-col items-start space-y-6">
-                        <a href="#" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100  transition duration-200">Services fiduciaire <span aria-hidden="true" class="ml-2">&rarr;</span></a>
-                        <a href="#" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100  transition duration-200">Audit et contrôles <span aria-hidden="true" class="ml-2">&rarr;</span></a>
-                        <a href="#" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100 transition duration-200">Conseil entreprise <span aria-hidden="true" class="ml-2">&rarr;</span></a>
+                        <a href="{{ path('app_services_fiduciaire') }}" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100  transition duration-200">Services fiduciaire <span aria-hidden="true" class="ml-2">&rarr;</span></a>
+                        <a href="{{ path('app_audit_et_controles') }}" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100  transition duration-200">Audit et contrôles <span aria-hidden="true" class="ml-2">&rarr;</span></a>
+                        <a href="{{ path('app_conseil_entreprise') }}" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100 transition duration-200">Conseil entreprise <span aria-hidden="true" class="ml-2">&rarr;</span></a>
                     </div>
                 </div>
             </div>
             <img class="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2" src="{{ asset('media/site/fiduciaire-geneve-sa.webp') }}" alt="">
+        </div>
+    </div>
+    <div class="bg-gray-50 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h3 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos engagements</h3>
+            </div>
+            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900 font-main">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-main">
+                                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                                </svg>
+                            </div>
+                            Engagement
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Un travail d’excellence et un professionnalisme sans faille pour relever les défis de nos clients.</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900 font-main">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-main">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                                </svg>
+
+                            </div>
+                            Pragmatisme
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Une approche rigoureuse et engagée pour soutenir la croissance de nos clients et transformer les décisions en actions.</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900 font-main">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-main">
+                                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                                </svg>
+                            </div>
+                            Long terme
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Nous nous engageons toujours avec nos clients pour leur délivrer des résultats immédiats avec un impact au long terme.</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900 font-main">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-main">
+                                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                                </svg>
+                            </div>
+                            Indépendance
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Nous agissons en toute indépendance, dans le respect des codes éthiques pour le soutien des efforts RSE de nos clients.</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="relative bg-white">
+        <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+            <div class="order-1 px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32">
+                <div class="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
+                    <h3 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Une Fiduciaire à vos côtés dans toutes les étapes de votre développement</h3>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Avec 3 bureaux établis en Suisse dont notre siège à Genève, nous agissons toujours au plus proche de nos clients.</p>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Nos collaborateurs sont disponibles sur site en fonction de vos activités et nos technologies vous permettent de vous accompagner partout, en Suisse et dans le monde.</p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                        <a href="{{ path('app_contact') }}" class="text-sm rounded-lg font-semibold bg-main px-3.5 py-2.5 text-white border-solid border border-main hover:bg-second hover:border-second transition duration-200">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+            <img class="order-2 h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2" src="{{ asset('media/site/fiduciaire-geneve.webp') }}" alt="">
         </div>
     </div>
 {% endblock %}

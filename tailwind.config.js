@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         'main':'#051C2B',
         'second':'#455965',
+        'red-custom':'#EC0100',
       }
     },
   },

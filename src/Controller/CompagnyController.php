@@ -31,4 +31,10 @@ class CompagnyController extends AbstractController
     {
         return $this->render('compagny/audit-et-controles.html.twig');
     }
+
+    #[Route('/audit-et-controles/controle-restreint', name: 'app_controle_restreint')]
+    public function controleRestreint(): Response
+    {
+        return $this->render('compagny/controle-restreint.html.twig');
+    }
 }

@@ -11,3 +11,50 @@ import Alpine from 'alpinejs'
 
 window.Alpine = Alpine
 Alpine.start()
+
+import persist from '@alpinejs/persist'
+
+Alpine.plugin(persist)
+
+document.addEventListener("DOMContentLoaded", function () {
+    Alpine.start()
+})
+
+document.addEventListener("alpine:init", function () {
+    Alpine.data('cookieConsent', () => ({
+        state: Alpine.$persist('unknown').as('cookieConsent'),
+
+        init() {
+            this.dispatchEvent()
+        },
+
+        dialogue: {
+            ['x-show']() {
+                return this.state == 'unknown'
+            }
+        },
+
+        accept: {
+            ['@click']() {
+                this.state = 'accepted'
+
+                this.dispatchEvent()
+            }
+        },
+
+        decline: {
+            ['@click']() {
+                this.state = 'declined'
+
+                this.dispatchEvent()
+            }
+        },
+
+        dispatchEvent() {
+            document.dispatchEvent(new CustomEvent('cookieConsent', {
+                detail: this.state
+            }))
+        }
+
+    }))
+})
