@@ -3,13 +3,13 @@
 {% block title %}À propos{% endblock %}
 
 {% block body %}
-    <div class="bg-main px-6 py-24 lg:px-8">
+    <section class="bg-main px-6 py-24 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
             <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">À propos</h2>
             <p class="mt-6 text-lg leading-8 text-gray-100">Avec 3 établissements en Suisse (Genève, Annemasse, Genève), Fiduciaire en Genevoise vous accompagne depuis 2017 dans vos projets.</p>
         </div>
-    </div>
-    <div class="relative bg-white">
+    </section>
+    <section class="relative bg-white">
         <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
             <div class="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:px-8 lg:pt-32">
                 <div class="mx-auto max-w-2xl lg:max-w-lg">
@@ -24,8 +24,8 @@
             </div>
             <img class="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2" src="{{ asset('media/site/fiduciaire-geneve-sa.webp') }}" alt="">
         </div>
-    </div>
-    <div class="bg-gray-50 py-24 sm:py-32">
+    </section>
+    <section class="bg-gray-50 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:text-center">
                 <h3 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nos engagements</h3>
@@ -80,8 +80,8 @@
                 </dl>
             </div>
         </div>
-    </div>
-    <div class="relative bg-white">
+    </section>
+    <section class="relative bg-white">
         <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
             <div class="order-1 px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32">
                 <div class="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
@@ -95,5 +95,5 @@
             </div>
             <img class="order-2 h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2" src="{{ asset('media/site/fiduciaire-geneve.webp') }}" alt="">
         </div>
-    </div>
+    </section>
 {% endblock %}

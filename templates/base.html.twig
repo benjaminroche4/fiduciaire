@@ -93,19 +93,19 @@
             </nav>
         </header>
 
-        {% block body %}{% endblock %}
+        <main>
+            {% block body %}{% endblock %}
 
-        {% set current_route = app.request.attributes.get('_route') %}
-        {% set exception = app.request.attributes.get('exception') %}
-        {% set status_code = exception ? exception.statusCode : 200 %}
+            {% set current_route = app.request.attributes.get('_route') %}
+            {% set exception = app.request.attributes.get('exception') %}
+            {% set status_code = exception ? exception.statusCode : 200 %}
 
-        {% if current_route not in excluded_routes and status_code not in [404, 403, 500] %}
-            {% include 'components/_block_CTA_footer.html.twig' %}
-        {% endif %}
+            {% if current_route not in excluded_routes and status_code not in [404, 403, 500] %}
+                {% include 'components/_block_CTA_footer.html.twig' %}
+            {% endif %}
+        </main>
 
-
-
-        <div x-data="cookieConsent" x-cloak>
+        <section x-data="cookieConsent" x-cloak>
             <div x-bind="dialogue"  class="fixed inset-x-0 bottom-0 flex flex-col justify-between gap-x-8 gap-y-4 bg-main p-6 ring-1 ring-gray-900/10 md:flex-row md:items-center lg:px-8">
                 <p class="max-w-4xl text-sm leading-6 text-white">Nous utilisons des cookies pour optimiser notre site et nos services. En cliquant sur « Accepter », vous consentez à leur utilisation. Pour en savoir plus ou pour modifier vos préférences, visitez l'onglet <a href="{{ path('app_donnees_personnelles') }}" class="text-gray-100 font-semibold font-second">données personnelles</a>.</p>
                 <div class="flex flex-none items-center gap-x-5">
@@ -113,7 +113,7 @@
                     <button x-bind="decline" type="button" class="text-sm font-semibold leading-6 text-white">Décliner</button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <footer class="bg-main" aria-labelledby="footer-heading">
             <h2 id="footer-heading" class="sr-only">Fiduciaire Genevoise</h2>
