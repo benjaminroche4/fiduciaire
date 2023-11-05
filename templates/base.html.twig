@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Fiduciaire Genevoise - {% block title %}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="robots" content="{% block robots %}{% endblock %}"/>
+
         <link rel="icon" type="image/jpg" href="{{ asset('media/logo/favicon.jpg') }}" sizes="32x32">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +17,15 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Fiduciaire Genevoise",
+                "url": "https://fiduciaire-genevoise.ch"
+            }
+        </script>
     </head>
     <body>
         <header class="bg-white">
@@ -24,10 +36,10 @@
                         <img class="h-7 w-auto" src="{{ asset('media/logo/logo.png') }}" alt="Fiduciaire Genevoise Logo">
                     </a>
                     <div class="hidden lg:flex lg:gap-x-6">
-                        <a href="{{ path('app_services_fiduciaire') }}" class="text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-8 decoration-second">Services fiduciaire</a>
-                        <a href="{{ path('app_audit_et_controles') }}" class="text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-8 decoration-second">Audit et contrôles</a>
-                        <a href="{{ path('app_conseil_entreprise') }}" class="text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-8 decoration-second">Conseil entreprise</a>
-                        <a href="{{ path('app_a_propos') }}" class="text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-8 decoration-second">À propos</a>
+                        <a href="{{ path('app_services_fiduciaire') }}" class="{% if app.request.attributes.get('_route') == 'app_services_fiduciaire' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Services fiduciaire</a>
+                        <a href="{{ path('app_audit_et_controles') }}" class="{% if app.request.attributes.get('_route') == 'app_audit_et_controles' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Audit et contrôles</a>
+                        <a href="{{ path('app_conseil_entreprise') }}" class="{% if app.request.attributes.get('_route') == 'app_conseil_entreprise' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Conseil entreprise</a>
+                        <a href="{{ path('app_a_propos') }}" class="{% if app.request.attributes.get('_route') == 'app_a_propos' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">À propos</a>
                     </div>
                 </div>
                 <div class="hidden lg:flex gap-x-6">
@@ -67,12 +79,20 @@
                                     <span class="sr-only">Fiduciaire Genevoise</span>
                                     <img class="h-7 w-auto" src="{{ asset('media/logo/logo.png') }}" alt="Fiduciare Genevoise Logo">
                                 </a>
-                                <button @click="isOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                                    <span class="sr-only">Close menu</span>
-                                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </button>
+                                <div class="inline-flex gap-x-6">
+                                    <a href="tel:0225624239" class="text-sm font-semibold leading-6 text-gray-900 inline-flex align-center items-center">
+                                        <svg viewBox="0 0 32 32" fill="currentColor" class="w-5 h-5 mt-1 mr-1">
+                                            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                                        </svg>
+                                        022 562 42 39
+                                    </a>
+                                    <button @click="isOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                                        <span class="sr-only">Close menu</span>
+                                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div class="mt-6 flow-root">
                                 <div class="-my-6 divide-y divide-gray-500/10">
@@ -166,9 +186,6 @@
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
                                         <a href="{{ path('app_contact') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Contactez-nous</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Nos engagements</a>
                                     </li>
                                 </ul>
                             </div>

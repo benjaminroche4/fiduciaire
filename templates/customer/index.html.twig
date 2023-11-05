@@ -1,14 +1,18 @@
 {% extends 'base.html.twig' %}
 
+{% block robots %}index, follow{% endblock %}
 {% block title %}Devenir client{% endblock %}
+{% block description %}
+    Votre allié en gestion comptable, fiscalité, audit et conseils stratégiques à Genève, étendant notre expertise à travers la Suisse et l'Europe{% endblock %}
 
 {% block body %}
     <section class="bg-main px-6 py-24 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Devenir client</h2>
+            <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Rejoignez Fiduciaire Genevoise pour un partenariat fiable à Genève. Contactez-nous pour explorer nos services sur mesure et devenir client.</h2>
         </div>
     </section>
     <section class="bg-white">
+{#
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
                 <nav aria-label="Progress">
@@ -57,8 +61,10 @@
                         </li>
                     </ol>
                 </nav>
-            {{ form(form) }}
             </div>
         </div>
+#}
+        {{ form(form) }}
+
     </section>
 {% endblock %}

@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textUnderlineOffset: {
+        10: '10px',
+      },
       colors: {
         'main':'#051C2B',
         'second':'#455965',
