@@ -13,7 +13,7 @@
 {% block body %}
     <section class="relative bg-white">
         <div class="lg:absolute lg:inset-0 lg:left-1/2">
-            <img class="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full" src="{{ asset('media/site/fiduciaire-office.webp') }}" alt="Bureau Fiduciaire Genevoise à Genève">
+            <img class="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full" src="{{ asset('media/site/fiduciaire-genevoise-contact.webp') }}" alt="Bureau Fiduciaire Genevoise à Genève">
         </div>
         <div class="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
             <div class="px-6 lg:px-8">
@@ -50,19 +50,19 @@
                     {{ form_start(form) }}
                      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mt-16">
                             <div>
-                                <label class="block font-semibold text-gray-900">{{ form_label(form.firstName, 'Prénom') }}</label>
+                                <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.firstName, 'Prénom') }}</label>
                                 <div class="mt-2.5">
                                     {{ form_widget(form.firstName, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
                                 </div>
                             </div>
                             <div>
-                                <label class="block font-semibold text-gray-900">{{ form_label(form.lastName, 'Nom') }}</label>
+                                <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.lastName, 'Nom') }}</label>
                                 <div class="mt-2.5">
                                     {{ form_widget(form.lastName, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
                                 </div>
                             </div>
                             <div class="sm:col-span-2">
-                                <label class="block font-semibold text-gray-900">{{ form_label(form.email, 'Email') }}</label>
+                                <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.email, 'Email') }}</label>
                                 <div class="mt-2.5">
                                     {{ form_widget(form.email, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
                                 </div>
@@ -86,13 +86,13 @@
                                 </div>
                             </div>
                             <div class="sm:col-span-2">
-                                <label class="block font-semibold text-gray-900">{{ form_label(form.help, 'En quoi pouvons-nous vous aider ?') }}</label>
+                                <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.help, 'En quoi pouvons-nous vous aider ?') }}</label>
                                 <div class="mt-2.5">
                                     {{ form_widget(form.help, {'attr': {'rows':'4','class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
                                 </div>
                             </div>
                             <div class="sm:col-span-2">
-                                <div class="flex justify-between text-sm leading-6">
+                                <div class="flex justify-between text-sm leading-6 text-sm">
                                     <label class="block font-semibold text-gray-900">{{ form_label(form.message, 'Message') }}</label>
                                     <p id="phone-description" class="text-gray-400">Optionel</p>
                                 </div>
@@ -100,7 +100,7 @@
                                      {{ form_widget(form.message, {'attr': {'rows':'4','class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
                                  </div>
                              </div>
-                            <div class="sm:col-span-2 flex items-center">
+                            <div class="sm:col-span-2 flex items-center text-sm">
                                     {{ form_widget(form.accept, {'attr': {'class' : 'h-4 w-4 rounded border-gray-900 border-2 text-main focus:ring-main'}}) }}
                                     <label class="ml-3 block text-sm leading-6 text-gray-900">{{ form_label(form.accept, 'En cochant cette case, j\'accepte que les informations saisies soient utilisées dans le cadre de la prise de contact.') }}</label>
                              </div>

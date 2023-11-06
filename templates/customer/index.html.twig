@@ -16,19 +16,18 @@
             <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Devenir client</h1>
         </div>
     </section>
-    <section class="bg-white">
-{#
+    <section class="bg-gray-50">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
-                <nav aria-label="Progress">
+            <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none space-y-4">
+                <nav aria-label="Progress" class="bg-white">
                     <ol role="list" class="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0">
                         <li class="relative md:flex md:flex-1">
                             <!-- First Step -->
                             <div class="flex items-center px-6 py-4 text-sm font-medium font-main" aria-current="step">
-                                <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-indigo-600">
-                                  <span class="text-indigo-600">01</span>
+                                <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-main">
+                                  <span class="text-main font-semibold">01</span>
                                 </span>
-                                <span class="ml-4 text-sm font-medium text-indigo-600">Informations personnelles</span>
+                                <span class="ml-4 text-sm font-semibold text-main">Informations générales</span>
                             </div>
                             <!-- Arrow separator for lg screens and up -->
                             <div class="absolute right-0 top-0 hidden h-full w-5 md:block" aria-hidden="true">
@@ -38,37 +37,119 @@
                             </div>
                         </li>
                         <li class="relative md:flex md:flex-1 hidden md:visible">
-                            <!-- Current Step -->
                             <div class="group flex items-center font-main">
                                 <span class="flex items-center px-6 py-4 text-sm font-medium">
                                   <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300">
                                     <span class="text-gray-500">02</span>
                                   </span>
-                                  <span class="ml-4 text-sm font-medium text-gray-500">Détails de la société</span>
-                                </span>
-                            </div>
-                            <!-- Arrow separator for lg screens and up -->
-                            <div class="absolute right-0 top-0 hidden h-full w-5 md:block" aria-hidden="true">
-                                <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none" preserveAspectRatio="none">
-                                    <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="relative md:flex md:flex-1 hidden md:visible">
-                            <div class="group flex items-center font-main">
-                                <span class="flex items-center px-6 py-4 text-sm font-medium">
-                                  <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300">
-                                    <span class="text-gray-500">03</span>
-                                  </span>
-                                  <span class="ml-4 text-sm font-medium text-gray-500">Confirmation</span>
+                                  <span class="ml-4 text-sm font-medium text-gray-500">Traitement par nos équipes</span>
                                 </span>
                             </div>
                         </li>
                     </ol>
                 </nav>
+                <div class="bg-white rounded-md border border-gray-300 p-4">
+                    <div class="sm:p-6">
+                        <div class="grid grid-cols-1 gap-x-10 gap-y-10 border-b border-gray-900/10 py-12 sm:py-14 md:grid-cols-3">
+                            <div>
+                                <h2 class="text-base font-semibold leading-7 text-gray-900">Informations personnelles</h2>
+                                <p class="mt-1 text-sm leading-6 text-gray-600">Ces informations serviront à vous recontacter.</p>
+                            </div>
+                            <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 md:col-span-2">
+                                <div>
+                                    <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.firstName, 'Prénom') }}</label>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.firstName, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.lastName, 'Nom') }}</label>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.lastName, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.email, 'Email') }}</label>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.email, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block font-semibold text-gray-900 text-sm">{{ form_label(form.phone, 'Téléphone') }}</label>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.phone, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-x-10 gap-y-6 border-b border-gray-900/10 py-14 md:grid-cols-3">
+                            <div>
+                                <h2 class="text-base font-semibold leading-7 text-gray-900">Informations sur l'entreprise</h2>
+                                <p class="mt-1 text-sm leading-6 text-gray-600">Ces informations serviront à être plus pertinant lors de notre appel.</p>
+                            </div>
+                            <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 md:col-span-2">
+                                <div>
+                                    <div class="flex justify-between text-sm leading-6">
+                                        <label class="block font-semibold text-gray-900">{{ form_label(form.society, 'Société') }}</label>
+                                        <p id="message-description" class="text-gray-400">Optionel</p>
+                                    </div>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.society, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm leading-6">
+                                        <label class="block font-semibold text-gray-900">{{ form_label(form.legalStatus, 'Statut juridique') }}</label>
+                                        <p id="message-description" class="text-gray-400">Optionel</p>
+                                    </div>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.legalStatus, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm leading-6">
+                                        <label class="block font-semibold text-gray-900">{{ form_label(form.numberEmployees, 'Nombre de salariés') }}</label>
+                                        <p id="message-description" class="text-gray-400">Optionel</p>
+                                    </div>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.numberEmployees, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm leading-6">
+                                        <label class="block font-semibold text-gray-900">{{ form_label(form.localitySociety, 'Localité du siège social') }}</label>
+                                        <p id="message-description" class="text-gray-400">Optionel</p>
+                                    </div>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.localitySociety, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm leading-6">
+                                        <label class="block font-semibold text-gray-900">{{ form_label(form.position, 'Rôle dans l\'entreprise') }}</label>
+                                        <p id="message-description" class="text-gray-400">Optionel</p>
+                                    </div>
+                                    <div class="mt-2.5">
+                                        {{ form_widget(form.position, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-12 gap-x-10 gap-y-6 py-8 sm:py-14">
+                            <div class="col-span-10 flex items-center justify-end">
+                                <div class="flex items-center">
+                                    {{ form_widget(form.accept, {'attr': {'class' : 'h-4 w-4 rounded border-gray-900 border-2 text-main focus:ring-main'}}) }}
+                                    <label class="ml-3 text-sm leading-6 text-gray-900">{{ form_label(form.accept, 'En cochant cette case, j\'accepte que les informations saisies soient utilisées dans le cadre de la prise de contact.') }}</label>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex justify-end items-center">
+                                <button type="submit" class="rounded-lg bg-main px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-second transition duration-200">Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-#}
-        {{ form(form) }}
     </section>
+    {{ form(form) }}
 {% endblock %}

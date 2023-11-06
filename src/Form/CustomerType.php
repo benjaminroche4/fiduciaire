@@ -72,7 +72,14 @@ class CustomerType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('numberEmployees', TextType::class, [
+            ->add('numberEmployees', ChoiceType::class, [
+                'choices'  => [
+                    '1-2 employés' => '1-2 employés',
+                    '2-5 employés' => '2-5 employés',
+                    '5-10 employés' => '5-10 employés',
+                    '>20 employés' => '>20 employés',
+                ],
+                'placeholder' => 'Faites votre choix...',
                 'constraints' => [
                     new Assert\NotBlank([
                         'message' => 'Ce champ ne ne doit pas être vide.',
@@ -94,9 +101,11 @@ class CustomerType extends AbstractType
             ])
             ->add('position', ChoiceType::class, [
                 'choices'  => [
-                    'Directeur' => 'Directeur',
-                    'Service RH' => 'Service RH',
-                    'Employé' => 'Employé',
+                    'Administrateur' => 'Administrateur',
+                    'C-level' => 'C-level',
+                    'Directeur - Responsable de département' => 'Directeur - Responsable de département',
+                    'Fonction finance' => 'Fonction Finance',
+                    'Fonction RH' => 'Fonction RH',
                 ],
                 'placeholder' => 'Faites votre choix...',
                 'constraints' => [

@@ -50,7 +50,7 @@ class Customer
     )]
     private ?string $phone = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     #[Assert\Length(
         min: 2,
         max: 255,
@@ -59,16 +59,16 @@ class Customer
     )]
     private ?string $legalStatus = null;
 
-    #[ORM\Column]
+    #[ORM\Column(length: 40, nullable: true)]
     #[Assert\Length(
         min: 1,
-        max: 7,
+        max: 40,
         minMessage: 'Ce champ doit faire au minimum {{ limit }} caractères',
         maxMessage: 'Ce champ doit faire au maximum {{ limit }} caractères',
     )]
-    private ?int $numberEmployees = null;
+    private ?string $numberEmployees = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable: true)]
     #[Assert\Length(
         min: 4,
         max: 50,
@@ -77,7 +77,7 @@ class Customer
     )]
     private ?string $localitySociety = null;
 
-    #[ORM\Column(length: 70)]
+    #[ORM\Column(length: 70, nullable: true)]
     #[Assert\Length(
         min: 2,
         max: 50,
@@ -86,7 +86,7 @@ class Customer
     )]
     private ?string $society = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     #[Assert\Length(
         min: 2,
         max: 50,
@@ -166,12 +166,12 @@ class Customer
         return $this;
     }
 
-    public function getNumberEmployees(): ?int
+    public function getNumberEmployees(): ?string
     {
         return $this->numberEmployees;
     }
 
-    public function setNumberEmployees(int $numberEmployees): static
+    public function setNumberEmployees(string $numberEmployees): static
     {
         $this->numberEmployees = $numberEmployees;
 
