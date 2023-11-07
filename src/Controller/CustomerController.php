@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CustomerController extends AbstractController
 {
     #[Route('/devenir-client', name: 'app_devenir_client')]
-    public function index(Request $request, EntityManagerInterface $entityManager): Response
+    public function devenirClient(Request $request, EntityManagerInterface $entityManager): Response
     {
         $contact = new Customer();
         $form = $this->createForm(CustomerType::class, $contact);
@@ -26,12 +26,17 @@ class CustomerController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();
 
-            $this->addFlash('contactSuccess', 'Nous avons bien reçu votre inscription. Un collaborateur va prendre contact avec vous rapidement.');
-            return $this->redirectToRoute('app_contact');
+            return $this->redirectToRoute('app_devenir_client_traitement');
         }
 
-        return $this->render('customer/index.html.twig', [
+        return $this->render('customer/devenir-client.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    #[Route('/devenir-client/traitement', name: 'app_devenir_client_traitement')]
+    public function devenirClientTraitement(): Response
+    {
+        return $this->render('customer/traitement.html.twig');
     }
 }

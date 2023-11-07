@@ -8,6 +8,7 @@ parameters:
         - app_contact
         - app_connexion
         - app_devenir_client
+        - app_devenir_client_traitement
 
 services:
     # default configuration for services in *this* file

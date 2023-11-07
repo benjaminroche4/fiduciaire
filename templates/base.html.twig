@@ -144,16 +144,6 @@
             {% endif %}
         </main>
 
-        <section x-data="cookieConsent" x-cloak>
-            <div x-bind="dialogue"  class="fixed inset-x-0 bottom-0 flex flex-col justify-between gap-x-8 gap-y-4 bg-main p-6 ring-1 ring-gray-900/10 md:flex-row md:items-center lg:px-8">
-                <p class="max-w-4xl text-sm leading-6 text-white">Nous utilisons des cookies pour optimiser notre site et nos services. En cliquant sur « Accepter », vous consentez à leur utilisation. Pour en savoir plus ou pour modifier vos préférences, visitez l'onglet <a href="{{ path('app_donnees_personnelles') }}" class="text-gray-100 font-semibold font-second">données personnelles</a>.</p>
-                <div class="flex flex-none items-center gap-x-5">
-                    <button x-bind="accept" type="button" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-main shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Accepter</button>
-                    <button x-bind="decline" type="button" class="text-sm font-semibold leading-6 text-white">Décliner</button>
-                </div>
-            </div>
-        </section>
-
         <footer class="bg-main" aria-labelledby="footer-heading">
             <h2 id="footer-heading" class="sr-only">Fiduciaire Genevoise</h2>
             <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">

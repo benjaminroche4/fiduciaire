@@ -2,13 +2,13 @@
 
 {% block robots %}index, follow{% endblock %}
 {% block title %}Devenir client{% endblock %}
-{% block description %}Rejoignez notre fiduciaire de Genève pour un partenariat financier sur mesure. Expertise comptable, audit et conseil fiscal pour propulser votre entreprise.{% endblock %}
+{% block description %}Rejoignez notre fiduciaire à Genève pour un partenariat financier sur mesure. Expertise comptable, audit et conseil fiscal pour propulser votre entreprise.{% endblock %}
 
 {% block ogTitle %}Fiduciaire Genevoise - Devenir client{% endblock %}
 {% block ogUrl %}https://fiduciaire-genevoise.ch/devenir-client{% endblock %}
 {% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
 {% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
-{% block ogDescription %}Rejoignez notre fiduciaire de Genève pour un partenariat financier sur mesure. Expertise comptable, audit et conseil fiscal pour propulser votre entreprise.{% endblock %}
+{% block ogDescription %}Rejoignez notre fiduciaire à Genève pour un partenariat financier sur mesure. Expertise comptable, audit et conseil fiscal pour propulser votre entreprise.{% endblock %}
 
 {% block body %}
     <section class="bg-main px-6 py-24 lg:px-8">
@@ -29,7 +29,6 @@
                                 </span>
                                 <span class="ml-4 text-sm font-semibold text-main">Informations générales</span>
                             </div>
-                            <!-- Arrow separator for lg screens and up -->
                             <div class="absolute right-0 top-0 hidden h-full w-5 md:block" aria-hidden="true">
                                 <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none" preserveAspectRatio="none">
                                     <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor" stroke-linejoin="round" />
@@ -45,14 +44,35 @@
                                   <span class="ml-4 text-sm font-medium text-gray-500">Traitement par nos équipes</span>
                                 </span>
                             </div>
+                            <div class="absolute right-0 top-0 hidden h-full w-5 md:block" aria-hidden="true">
+                                <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none" preserveAspectRatio="none">
+                                    <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="relative md:flex md:flex-1 hidden md:visible">
+                            <div class="group flex items-center font-main">
+                                <span class="flex items-center px-6 py-4 text-sm font-medium">
+                                  <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300">
+                                    <span class="text-gray-500">03</span>
+                                  </span>
+                                  <span class="ml-4 text-sm font-medium text-gray-500">Confirmation</span>
+                                </span>
+                            </div>
                         </li>
                     </ol>
                 </nav>
                 <div class="bg-white rounded-md border border-gray-300 p-4">
-                    <div class="sm:p-6">
+                    {{ form_start(form) }}
+                        <div class="sm:p-6">
                         <div class="grid grid-cols-1 gap-x-10 gap-y-10 border-b border-gray-900/10 py-12 sm:py-14 md:grid-cols-3">
                             <div>
-                                <h2 class="text-base font-semibold leading-7 text-gray-900">Informations personnelles</h2>
+                                <div class="flex space-x-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <h2 class="text-base font-semibold leading-7 text-gray-900">Informations personnelles</h2>
+                                </div>
                                 <p class="mt-1 text-sm leading-6 text-gray-600">Ces informations serviront à vous recontacter.</p>
                             </div>
                             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 md:col-span-2">
@@ -84,7 +104,12 @@
                         </div>
                         <div class="grid grid-cols-1 gap-x-10 gap-y-6 border-b border-gray-900/10 py-14 md:grid-cols-3">
                             <div>
-                                <h2 class="text-base font-semibold leading-7 text-gray-900">Informations sur l'entreprise</h2>
+                                <div class="flex space-x-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                                    </svg>
+                                    <h2 class="text-base font-semibold leading-7 text-gray-900">Informations sur l'entreprise</h2>
+                                </div>
                                 <p class="mt-1 text-sm leading-6 text-gray-600">Ces informations serviront à être plus pertinant lors de notre appel.</p>
                             </div>
                             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 md:col-span-2">
@@ -135,21 +160,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-12 gap-x-10 gap-y-6 py-8 sm:py-14">
-                            <div class="col-span-10 flex items-center justify-end">
+                            <div class="grid grid-cols-1 gap-x-10 gap-y-6 py-14 lg:grid-cols-8">
+                            <div class="lg:col-start-5 md:col-span-3 flex items-center justify-end">
                                 <div class="flex items-center">
                                     {{ form_widget(form.accept, {'attr': {'class' : 'h-4 w-4 rounded border-gray-900 border-2 text-main focus:ring-main'}}) }}
                                     <label class="ml-3 text-sm leading-6 text-gray-900">{{ form_label(form.accept, 'En cochant cette case, j\'accepte que les informations saisies soient utilisées dans le cadre de la prise de contact.') }}</label>
                                 </div>
                             </div>
-                            <div class="col-span-2 flex justify-end items-center">
+                            <div class="lg:col-span-1 flex justify-end items-center">
                                 <button type="submit" class="rounded-lg bg-main px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-second transition duration-200">Envoyer</button>
                             </div>
                         </div>
                     </div>
+                    {{ form_end(form) }}
                 </div>
             </div>
         </div>
     </section>
-    {{ form(form) }}
 {% endblock %}

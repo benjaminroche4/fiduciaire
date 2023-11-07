@@ -50,13 +50,7 @@ class CustomerType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('society', TextType::class, [
-                'constraints' => [
-                    new Assert\NotBlank([
-                        'message' => 'Ce champ ne ne doit pas être vide.',
-                    ]),
-                ],
-            ])
+            ->add('society')
             ->add('legalStatus', ChoiceType::class, [
                 'choices'  => [
                     'SA' => 'SA',
@@ -66,11 +60,7 @@ class CustomerType extends AbstractType
                     'Autres' => 'Autres',
                 ],
                 'placeholder' => 'Faites votre choix...',
-                'constraints' => [
-                    new Assert\NotBlank([
-                        'message' => 'Ce champ ne ne doit pas être vide.',
-                    ]),
-                ],
+                'required' => false,
             ])
             ->add('numberEmployees', ChoiceType::class, [
                 'choices'  => [
@@ -80,11 +70,7 @@ class CustomerType extends AbstractType
                     '>20 employés' => '>20 employés',
                 ],
                 'placeholder' => 'Faites votre choix...',
-                'constraints' => [
-                    new Assert\NotBlank([
-                        'message' => 'Ce champ ne ne doit pas être vide.',
-                    ]),
-                ],
+                'required' => false,
             ])
             ->add('localitySociety', ChoiceType::class, [
                 'choices'  => [
@@ -93,11 +79,7 @@ class CustomerType extends AbstractType
                     'Étranger hors UE' => 'Étranger hors UE',
                 ],
                 'placeholder' => 'Faites votre choix...',
-                'constraints' => [
-                    new Assert\NotBlank([
-                        'message' => 'Ce champ ne ne doit pas être vide.',
-                    ]),
-                ],
+                'required' => false,
             ])
             ->add('position', ChoiceType::class, [
                 'choices'  => [
@@ -108,11 +90,7 @@ class CustomerType extends AbstractType
                     'Fonction RH' => 'Fonction RH',
                 ],
                 'placeholder' => 'Faites votre choix...',
-                'constraints' => [
-                    new Assert\NotBlank([
-                        'message' => 'Ce champ ne ne doit pas être vide.',
-                    ]),
-                ],
+                'required' => false,
             ])
             ->add('accept', CheckboxType::class, [
                 'constraints' => [
