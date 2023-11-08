@@ -59,7 +59,7 @@ class CustomerType extends AbstractType
                     'Association' => 'Association',
                     'Autres' => 'Autres',
                 ],
-                'placeholder' => 'Faites votre choix...',
+                'placeholder' => '',
                 'required' => false,
             ])
             ->add('numberEmployees', ChoiceType::class, [
@@ -69,7 +69,7 @@ class CustomerType extends AbstractType
                     '5-10 employés' => '5-10 employés',
                     '>20 employés' => '>20 employés',
                 ],
-                'placeholder' => 'Faites votre choix...',
+                'placeholder' => '',
                 'required' => false,
             ])
             ->add('localitySociety', ChoiceType::class, [
@@ -78,7 +78,7 @@ class CustomerType extends AbstractType
                     'Étranger UE' => 'Étranger UE',
                     'Étranger hors UE' => 'Étranger hors UE',
                 ],
-                'placeholder' => 'Faites votre choix...',
+                'placeholder' => '',
                 'required' => false,
             ])
             ->add('position', ChoiceType::class, [
@@ -89,7 +89,7 @@ class CustomerType extends AbstractType
                     'Fonction finance' => 'Fonction Finance',
                     'Fonction RH' => 'Fonction RH',
                 ],
-                'placeholder' => 'Faites votre choix...',
+                'placeholder' => '',
                 'required' => false,
             ])
             ->add('accept', CheckboxType::class, [

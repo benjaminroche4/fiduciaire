@@ -27,6 +27,13 @@ class Test extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
+    public function testDevenirClientTraitementController()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/devenir-client/traitement');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function testServicesFiduciaireController()
     {
         $client = static::createClient();

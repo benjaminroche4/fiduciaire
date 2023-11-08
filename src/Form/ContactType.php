@@ -52,7 +52,7 @@ class ContactType extends AbstractType
                     'Autres' => 'Autres',
 
                 ],
-                'placeholder' => 'Faites votre choix...',
+                'placeholder' => '',
                 'constraints' => [
                     new Assert\NotBlank([
                         'message' => 'Ce champ ne ne doit pas être vide.',
