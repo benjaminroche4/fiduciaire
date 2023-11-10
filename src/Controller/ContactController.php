@@ -35,7 +35,7 @@ class ContactController extends AbstractController
                 ->subject('[Fiduciaire Genevoise] Nouvelle demande de contact')
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
-                    'date' => new \DateTimeImmutable(),
+                    'createdAt' => new \DateTimeImmutable(),
                     'fistName' => $contact->getFirstName(),
                     'lastName' => $contact->getLastName(),
                     'society' => $contact->getSociety(),
