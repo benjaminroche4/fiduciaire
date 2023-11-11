@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -29,9 +30,9 @@ class ContactController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();
 
-            $email = (new TemplatedEmail())
+            $emailContact = (new TemplatedEmail())
                 ->from($contact->getEmail())
-                ->to('contact@uniflow.agency')
+                ->to(new Address('contact@uniflow.agency'))
                 ->subject('[Fiduciaire Genevoise] Nouvelle demande de contact')
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
@@ -39,7 +40,7 @@ class ContactController extends AbstractController
                     'fistName' => $contact->getFirstName(),
                     'lastName' => $contact->getLastName(),
                     'society' => $contact->getSociety(),
-                    'email' => $contact->getEmail(),
+                    'emailContact' => $contact->getEmail(),
                     'phone' => $contact->getPhone(),
                     'message' => $contact->getMessage(),
                     'help' => $contact->getHelp(),
@@ -47,7 +48,7 @@ class ContactController extends AbstractController
             ;
 
             try {
-                $mailer->send($email);
+                $mailer->send($emailContact);
             } catch (TransportExceptionInterface $e) {
                 $logger->error('Erreur lors de l\'envoi de l\'email :'. $e->getMessage());
             }

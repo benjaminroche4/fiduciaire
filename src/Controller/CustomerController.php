@@ -40,7 +40,7 @@ class CustomerController extends AbstractController
                     'fistName' => $contact->getFirstName(),
                     'lastName' => $contact->getLastName(),
                     'society' => $contact->getSociety(),
-                    'email' => $contact->getEmail(),
+                    'emailContact' => $contact->getEmail(),
                     'phone' => $contact->getPhone(),
                     'position' => $contact->getPosition(),
                     'numberEmployees' => $contact->getNumberEmployees(),

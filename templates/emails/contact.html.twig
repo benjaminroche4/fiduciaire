@@ -1,11 +1,11 @@
 <h1 class="text-green-600">Nouveau contact du site internet :</h1>
-<small>{{ contact.createdAt | date('d F Y') | format_date(locale='fr') }} à {{ comment.createdAt | date('H:i') }}</small>
+<p>{{ createdAt | date('d F Y') | format_date(locale='fr') }} à {{ createdAt | date('H:i') }}</p>
 <br/>
-<p>Nom/Prénom : {{ contact.fistName }} {{ contact.lastName }}</p>
-<p>Email : {{ contact.email }}</p>
-<p>Téléphone : {{ contact.phone }}</p>
-<p>Société : {{ contact.society }}</p>
-<p>Sujet : {{ contact.help }}</p>
-<p>Message : {{ contact.message }}</p>
+<p>Nom/Prénom : {{ fistName }} {{ lastName }}</p>
+<p>Email : {{ emailContact }}</p>
+<p>Téléphone : {{ phone }}</p>
+<p>Société : {{ society }}</p>
+<p>Sujet : {{ help }}</p>
+<p>Message : {{ message }}</p>
 <br/>
-<p>Cet email provient du formulaire de contact de fiduciaire-genevoise.ch.</p>
+<small>Cet email provient du formulaire de contact de fiduciaire-genevoise.ch.</small>
