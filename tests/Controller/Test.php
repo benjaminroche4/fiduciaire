@@ -89,4 +89,11 @@ class Test extends WebTestCase
         $client->request('GET', '/donnees-personnelles');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
+
+    public function blogList()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/blog');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
 }
