@@ -41,6 +41,9 @@ class Posts
     #[ORM\JoinColumn(nullable: false)]
     private ?PostCategories $category = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $mainPhoto = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -138,6 +141,18 @@ class Posts
     public function setCategory(?PostCategories $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getMainPhoto(): ?string
+    {
+        return $this->mainPhoto;
+    }
+
+    public function setMainPhoto(string $mainPhoto): static
+    {
+        $this->mainPhoto = $mainPhoto;
 
         return $this;
     }

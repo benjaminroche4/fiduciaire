@@ -24,6 +24,7 @@ class PostsFixtures extends Fixture implements DependentFixtureInterface
             $post->setSummary($faker->text(200));
             $post->setSlug($faker->slug);
             $post->setCategory($this->getReference(PostCategoriesFixtures::CATEGORY_REFERENCE));
+            $post->setMainPhoto('https://placehold.co/600x400');
 
             $manager->persist($post);
         }
