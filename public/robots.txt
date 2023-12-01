@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://fiduciaire-genevoise.ch/sitemap.xml
