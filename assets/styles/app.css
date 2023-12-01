@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3{
+    font-family: Montserrat,sans-serif;
+}
+
+p{
+    font-family: Barlow, sans-serif;
+}
+
+a, label{
+    font-family: Montserrat,sans-serif;
+}
+
+dd{
+    font-family: Montserrat,sans-serif;
+}
+
+dt{
+    font-family: Barlow, sans-serif;
+}
+
+.font-main{
+    font-family: Montserrat,sans-serif;
+}
+
+.font-second{
+    font-family: Barlow, sans-serif;
+}

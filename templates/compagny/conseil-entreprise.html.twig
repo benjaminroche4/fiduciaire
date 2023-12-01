@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}Conseil entreprise{% endblock %}
+{% block description %}Optimisez la structure juridique et financière de votre entreprise avec nos conseils experts en actes juridiques, réorganisation, consolidation et création de filiales en Suisse.{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Conseil entreprise{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/conseil-entreprise{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Optimisez la structure juridique et financière de votre entreprise avec nos conseils experts en actes juridiques, réorganisation, consolidation et création de filiales en Suisse.{% endblock %}
+
+{% block body %}
+    <section class="bg-no-repeat bg-cover bg-center" style="background-image: url('{{ asset('media/headers/header-fiduciaire-geneve-comptabilite.webp') }}')">
+        <div class="px-6 py-24 lg:px-8 bg-main bg-opacity-80">
+            <div class="mx-auto max-w-2xl text-center">
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Conseil entreprise</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-100">Nous accompagnons nos clients pour accélérer leur développement et atteindre leurs objectifs. Nos équipes sont à vos côtés pour vous aider à réaliser pleinement le potentiel de votre entreprise.</p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
+                    <div class="border border-solid border-gray-200 flex flex-col bg-gray-100 rounded-lg p-6 sm:m-2 shadow-lg">
+                        <dt class="text-xl lg:text-2xl font-semibold leading-7 text-gray-900 font-main">
+                            <h2>Actes juridiques</h2>
+                        </dt>
+                        <dd class="mt-3 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="flex-auto">Les modifications légales de votre entreprise ou de la composition de votre direction nécessite l’établissement procès-verbaux. Cela implique une réquisition d’inscription (art. 16 ORC) auprès de l’Office du registre du commerce.</p>
+                            <p class="flex-auto">Nos équipes vous accompagne et préparent la documentation juridique et la transmette à l’Office du registre du commerce.</p>
+                        </dd>
+                    </div>
+                    <div class="border border-solid border-gray-200 flex flex-col bg-gray-100 rounded-lg p-6 sm:m-2 shadow-lg">
+                        <dt class="text-xl lg:text-2xl font-semibold leading-7 text-gray-900 font-main">
+                            <h2>Réorganisation et Restructuration</h2>
+                        </dt>
+                        <dd class="mt-3 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="flex-auto">Depuis 2004, la loi fédérale sur la fusion régit et encadre les opérations de réorganisation ou de restructuration d’entreprises en Suisse.</p>
+                            <p class="flex-auto">Les procédures de restructuration prévues par la loi sont complexes la neutralité fiscale peut s’appliquer sous certaines conditions.</p>
+                        </dd>
+                    </div>
+                    <div class="border border-solid border-gray-200 flex flex-col bg-gray-100 rounded-lg p-6 sm:m-2 shadow-lg">
+                        <dt class="text-xl lg:text-2xl font-semibold leading-7 text-gray-900 font-main">
+                            <h2>Consolidation</h2>
+                        </dt>
+                        <dd class="mt-3 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="flex-auto">Accompagnement dans la consolidation financière des entreprises et évaluation des structures organisationnelles pour déterminer les entités à consolider.</p>
+                            <p class="flex-auto">Identification des transactions intra-groupes à éliminer, coherence des méthodes comptables et préparation des états financiers consolidés afin de fournir des conseils stratégiques.</p>
+                        </dd>
+                    </div>
+                    <div class="border border-solid border-gray-200 flex flex-col bg-gray-100 rounded-lg p-6 sm:m-2 shadow-lg">
+                        <dt class="text-xl lg:text-2xl font-semibold leading-7 text-gray-900 font-main">
+                            <h2>Filiale, Fondation et Holding</h2>
+                        </dt>
+                        <dd class="mt-3 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="flex-auto">Nous accompagnons nos clients dans la création de leurs filiales, fondations ou dans leur holding en Suisse.</p>
+                            <p class="flex-auto">Nous vous conseillons sur le choix de la forme juridique la plus adéquate et nous formalisons la rédaction des statuts en prenant compte les facteurs spécifiques à votre projet.</p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+{% endblock %}

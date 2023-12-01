@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block description %}{{ post.summary | u.truncate(131, '...') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Blog{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/blog{{ path('app_blog_post', {'slug': post.slug }) }}{% endblock %}
+{% block ogImage %}{{ asset('media/blog/mainPhotos/'~post.mainPhoto) }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}{{ post.summary | u.truncate(131, '...') }}{% endblock %}
+
+
+
+{% block body %}
+    <section class="bg-no-repeat bg-cover bg-center" style="background-image: url('{{ asset('media/blog/mainPhotos/'~post.mainPhoto) }}')">
+        <div class="bg-main px-6 py-24 lg:px-8 bg-opacity-80">
+            <div class="mx-auto max-w-2xl text-center">
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-4xl">{{ post.title }}</h1>
+                <div class="flex inline-block text-white justify-center mt-5 divide-x">
+                    <time datetime="{{ post.createdAt | date('d F Y') }}" class="text-sm text-gray-300 px-2">Publié le {{ post.createdAt | date('d F Y') | format_date(locale='fr') }}</time>
+                    {% if post.updatedAt != null %}
+                        <time datetime="{{ post.createdAt | date('d F Y') }}" class="text-sm text-gray-300 px-2">M.a.j le {{ post.createdAt | date('d F Y') | format_date(locale='fr') }}</time>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:max-w-4xl">
+                <p class="text-lg">Reconnue pour son <strong>système économique prospère et sa qualité de vie élevée</strong>, la Suisse a une structure salariale unique en matière de retenues et de cotisations sociales.</p>
+                <p class="mt-5 text-lg">Dans ce contexte, il est essentiel de <strong>comprendre la distinction entre le salaire brut et le salaire net</strong> pour mieux anticiper ses revenus et obligations.</p>
+                <p class="mt-5 text-lg">Plongeons-nous dans cet univers salarial.</p>
+                <h2 class="mt-10 text-2xl font-bold tracking-tight text-gray-900">I. Le salaire brut : qu'est-ce que c'est ?</h2>
+                <p class="mt-8 text-lg">Le salaire brut désigne le montant total convenu entre l'employeur et le salarié avant toute déduction. Il s'agit du montant inscrit dans le contrat de travail par l'employeur et sert de base de calcul pour diverses cotisations et impôts.</p>
+                <h2 class="mt-10 text-2xl font-bold tracking-tight text-gray-900">II. Le salaire net : le montant effectivement reçu</h2>
+                <p class="mt-8 text-lg">Après déduction de toutes les charges obligatoires et facultatives, le montant restant est appelé salaire net. C'est le montant que le salarié reçoit effectivement sur son compte bancaire. Pour passer du salaire brut au salaire net, il faut soustraire l'ensemble des contributions et taxes.</p>
+                <p class="mt-5 text-lg">Il s'agit du montant écrit en bas de la fiche de paie qui d'ailleurs tout comme le contrat de travail n'est pas obligatoire en suisse.</p>
+                <p class="mt-5 text-lg">Le salaire net est la base de calcul pour l'impôt sur le revenu (impôt personnel). </p>
+                <h3 class="mt-8 text-xl font-bold tracking-tight text-gray-900">Charges sociales obligatoires : les piliers de la protection sociale</h3>
+                <p class="mt-8 text-lg">La Suisse fonctionne selon un système de trois piliers pour assurer une protection sociale complète à ses citoyens. Ces piliers sont financés par des cotisations prélevées sur le salaire brut. Nous vous proposons ici de trouver toutes les informations pertinentes et un outil pour naviguer en autonomie.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">1. Premier pilier</h4>
+                <p class="mt-8 text-lg">Il assure la prévoyance étatique, garantissant un revenu minimal à la retraite. La cotisation AVS (Assurance Vieillesse et Survivants) est prélevée directement à partir du salaire brut. (équivalent de la sécurité sociale en France)</p>
+                <p class="mt-5 text-lg">Les cotisations avs prélevées comprennent aussi l'AI (assurance invalidité) ainsi que l'AC (assurance chômage) Assurance accidents (LAA)</p>
+                <p class="mt-5 text-lg">Le total de la part du salaire brut employé du 1er pilier s'élève à 10.65%.</p>
+                <p class="mt-5 text-lg">C'est à dire que pour une rémunération de 5'000 chf brut mensuel, 532,50 chf sont prélévés à partir du salaire brut.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">2. Deuxième pilier</h4>
+                <p class="mt-8 text-lg">Il s'agit de la prévoyance professionnelle ou LPP (L'assurance de Prévoyance Professionnelle). Elle vient compléter les prestations du premier pilier en cas de vieillesse, décès ou invalidité.</p>
+                <p class="mt-5 text-lg">Les montants prélévés appartiennent au salarié. La LPP intervient dans le calcul du salaire net en suisse au même titre que les autres charges sociales.</p>
+                <p class="mt-5 text-lg">De base les cositations LPP sont paritaires, à savoir que le même montant est prélevé du salaire mensuel brut pour l'employeur et l'employé. Les taux lpp sont identiques peut importe le canton et peut importe votre résidence.</p>
+                <p class="mt-5 text-lg">Il faut distinguer les cotisations obligatoires fixées par la confédération en fonction de son âge des cotisations d'un plan éventuel sur obligataire.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">Distinguer salaire assuré, salaire coordonné qui constitue le régime obligatoire de la lpp.</h4>
+                <p class="mt-8 text-lg">Tous les employés assujettis à l’AVS à partir du 1er janvier suivant leur 17e anniversaire doivent être assurés pour les risques d’invalidité et de décès.</p>
+                <p class="mt-5 text-lg">Doivent être assuré pour les prestations de vieillesse (lpp) tous les employés à partir du 1er janvier suivant leur 24e anniversaire en plus pour les prestations de vieillesse.</p>
+                <p class="mt-5 text-lg">Tout salaire annuel supérieur à 22’050 chf est assuré. Ce salaire marque le seuil d’entrée pour l’assurance obligatoire selon la LPP. Au-dessus d’un salaire annuel de plus de 22’050 chf, un salaire de 3’675 chf est au minimum assuré.</p>
+                <p class="mt-5 text-lg">Le salaire annuel compris entre 25’725 chf et 88’200 chf est assuré à titre obligatoire. Ce «salaire coordonné» (salaire LPP) s’élève au maximum à 62’475 chf qui est la différence entre les deux.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">La déduction de coordination :</h4>
+                <p class="mt-8 text-lg">La déduction de coordination détermine la partie de votre salaire qui est assurée dans la caisse de pension (2e pilier). En 2023, la déduction de coordination s’élève à 25'725 chf; elle permet d’éviter que des parties de votre salaire ne soient assurées à double.</p>
+                <p class="mt-5 text-lg">La déduction de coordination est fixée par le Conseil fédéral et son montant est identique pour toutes les personnes salariées. Elle correspond à 7/8e de la rente annuelle AVS maximale; comme indiqué plus haut, elle s’élève à CHF 25'725 en 2023.</p>
+                <p class="mt-5 text-lg"><span class="underline">Par exemple :</span> si vous gagnez CHF 70’000 par an, la partie de votre salaire assurée dans le 2e pilier est de CHF 44’275 (CHF 70’000 moins CHF 25’725). Ce salaire est également appelé «salaire coordonné» ou «salaire LPP assuré». Le salaire coordonné minimal s'élève à 3'675 chf en 2023 et le salaire coordonné maximal à 62'475 chf.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">Le taux de conversion:</h4>
+                <p class="mt-8 text-lg">A partir de l'âge de la retraite, (femmes 64 ans, hommes 65 ans), le capital vieillesse est transformé en une rente vieillesse annuelle au dit taux de conversion.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">Simulation de calcul d’une rente annuelle:</h4>
+                <p class="mt-8 text-lg">Un avoir de vieillesse de CHF 100’000 donne pour un taux de conversion de 6,8%, une rente annuelle de CHF 6’800. En plus de la rente de vieillesse, la rente de conjoint ainsi que les rentes d’enfants de retraités sont assurées.</p>
+                <p class="mt-5 text-lg">Le taux de conversion légal s’élève actuellement à 6,8 %. Ces éléments doivent vous permettent de pouvoir fixer votre budget fonction de votre source de revenu actuelle, de votre besoin à échéance et de votre statut.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">3. Troisième pilier</h4>
+                <p class="mt-8 text-lg">C'est la prévoyance individuelle liée ou non liée. Elle est volontaire et permet de combler les lacunes des deux premiers piliers et elle ne concerne pas la partie employeur.</p>
+                <p class="mt-5 text-lg">Outre les cotisations pour ces piliers, d'autres charges sociales obligatoires sont prélevées sur les salaires bruts. Elles comprennent: assurance chômage complémentaire (AAC), assurance accident complémentaire (LAAC), assurance maladie pour les indemnités journalières, assurance perte de gain.</p>
+                <h3 class="mt-8 text-xl font-bold tracking-tight text-gray-900">Charges sociales obligatoires : les piliers de la protection sociale</h3>
+                <p class="mt-8 text-lg">Charges sociales facultatives : une protection supplémentaire</p>
+                <p class="mt-5 text-lg">En plus des cotisations obligatoires, les salariés peuvent choisir de cotiser à des assurances facultatives pour bénéficier d'une couverture supplémentaire. Parmi celles-ci, on trouve les assurances complémentaires de santé, les assurances vie, ou d'autres formes d'assurances selon les besoins individuels mais aussi de prestations vieillesse notamment avec les cotisations surobligatoire de la LPP.</p>
+                <h4 class="mt-8 text-lg font-bold tracking-tight text-gray-900">Mieux qu'un calculateur, des exemples concrets:</h4>
+                <p class="mt-8 text-lg"><span class="underline">Exemple 1 :</span> Vous recevez un salaire mensuel AVS de CHF 4.500, ce qui équivant à CHF 54.000 par an. La portion de votre salaire sur laquelle s'applique la cotisation LPP obligatoire, appelée salaire coordonné, est de CHF 28.275. Ceci est calculé en soustrayant la déduction de coordination de 25.725 à votre revenu annuel AVS de 54.000.</p>
+                <p class="mt-5 text-lg"><span class="underline">Exemple 2 :</span> Votre salaire AVS mensuel est de CHF 7.500, soit un total annuel de CHF 90.000. Le salaire coordonné, sur lequel la cotisation LPP obligatoire est prélevée, s'élève à CHF 62.475. Ce montant est obtenu en déduisant la déduction de coordination (25.725) du salaire max LPP de 88.200. Notez que vous ne pouvez pas cotiser sur un salaire dépassant 88.200, qui est le plafond de la LPP.</p>
+                <p class="mt-5 text-lg"><span class="underline">Exemple 3 :</span> Votre salaire AVS mensuel s'établit à CHF 1.850, soit CHF 22.200 à l'année. La portion de votre salaire soumise à la cotisation LPP obligatoire (salaire coordonné) est de CHF 3.675. Bien que votre salaire coordonné, calculé en soustrayant la déduction de coordination (25.725) de votre revenu AVS annuel (22.200), soit inférieur à CHF 3.675, vous devez tout de même cotiser sur un minimum de CHF 3.675 car votre salaire dépasse le seuil d'admissibilité LPP de CHF 22.050.</p>
+                <h3 class="mt-8 text-xl font-bold tracking-tight text-gray-900">Tableau récapitulatif : salaire brut vs salaire net</h3>
+                <p class="mt-8 text-lg italic">(<span class="font-semibold">Note :</span> Les taux mentionnés ci-dessus sont approximatifs et peuvent varier en fonction des cantons, des conventions collectives ou des contrats individuels.)</p>
+                <figure class="mt-8">
+                    <img class="aspect-video rounded-xl bg-gray-50 object-cover" src="{{ asset('media/blog/images/salaire_brut_vs_salaire_net.jpg') }}" alt="Tableau salaire brut vs salaire net en Suisse">
+                    <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+                        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+                        </svg>
+                        Tableau récapitulatif du salaire brut vs salaire net
+                    </figcaption>
+                </figure>
+                <h3 class="mt-8 text-xl font-bold tracking-tight text-gray-900">Conclusion</h3>
+                <p class="mt-8 text-lg">Comprendre le salaire brut net Suisse nécessite une familiarisation avec le système des piliers et des diverses cotisations sociales. Le salaire net, après déductions, offre une vision claire du montant que les salariés peuvent dépenser ou épargner.</p>
+                <p class="mt-5 text-lg">Connaître ces détails est essentiel pour gérer efficacement ses finances et planifier son avenir en Suisse.</p>
+                <p class="mt-5 text-lg">Attention, le salaire brut en suisse semble élevé, mais il doit être mis en perspective avec le coût de la vie locale.</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

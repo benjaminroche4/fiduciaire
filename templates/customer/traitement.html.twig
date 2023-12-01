@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}noindex, nofollow{% endblock %}
+{% block title %}Traitement par nos équipes{% endblock %}
+
+{% block body %}
+    <section class="bg-main px-6 py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Devenir client</h1>
+        </div>
+    </section>
+    <section class="bg-gray-50">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none space-y-4">
+                <nav aria-label="Progress" class="bg-white">
+                    <ol role="list" class="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0">
+                        <li class="relative md:flex md:flex-1 hidden md:visible">
+                            <div class="group flex items-center font-main">
+                                <span class="flex items-center px-6 py-4 text-sm font-medium">
+                                  <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300">
+                                    <span class="text-gray-500">01</span>
+                                  </span>
+                                  <span class="ml-4 text-sm font-medium text-gray-500">Informations générales</span>
+                                </span>
+                            </div>
+                            <div class="absolute right-0 top-0 hidden h-full w-5 md:block" aria-hidden="true">
+                                <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none" preserveAspectRatio="none">
+                                    <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="relative md:flex md:flex-1">
+                            <div class="group flex items-center font-main">
+                                <span class="flex items-center px-6 py-4 text-sm font-medium font-main">
+                                  <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-main">
+                                    <span class="text-main font-semibold">02</span>
+                                  </span>
+                                  <span class="ml-4 text-sm font-semibold text-main">Traitement par nos équipes</span>
+                                </span>
+                            </div>
+                            <div class="absolute right-0 top-0 hidden h-full w-5 md:block" aria-hidden="true">
+                                <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none" preserveAspectRatio="none">
+                                    <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="relative md:flex md:flex-1 hidden md:visible">
+                            <div class="group flex items-center font-main">
+                                <span class="flex items-center px-6 py-4 text-sm font-medium">
+                                  <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300">
+                                    <span class="text-gray-500">03</span>
+                                  </span>
+                                  <span class="ml-4 text-sm font-medium text-gray-500">Confirmation</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="bg-white rounded-md border border-gray-300 p-4">
+                    <div class="sm:p-6">
+                        <div class="container px-4">
+                            <div class="flex flex-col items-center justify-center space-y-6 py-12 sm:py-14">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-10">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                </svg>
+                                <div class="text-center">
+                                    <h1 class="text-2xl font-semibold leading-7 text-green-600">Nous avons bien reçu votre demande</h1>
+                                    <p class="mt-2 text-lg leading-6 text-gray-600">Notre équipe va traiter votre dossier et vous recontactera dans <span class="font-semibold">moins de 24 heures</span>.</p>
+                                </div>
+                                <div class="flex items-center justify-center gap-x-6">
+                                    <a href="{{ path('app_home') }}" class="text-sm rounded-lg font-semibold bg-main px-3.5 py-2.5 text-white border-solid border border-main hover:bg-second hover:border-second transition duration-200">Revenir à l'accueil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
