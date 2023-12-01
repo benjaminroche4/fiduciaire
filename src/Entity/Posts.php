@@ -44,6 +44,15 @@ class Posts
     #[ORM\Column(length: 255)]
     private ?string $mainPhoto = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $authorName = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $authorJob = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $authorProfilePhoto = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +162,42 @@ class Posts
     public function setMainPhoto(string $mainPhoto): static
     {
         $this->mainPhoto = $mainPhoto;
+
+        return $this;
+    }
+
+    public function getAuthorName(): ?string
+    {
+        return $this->authorName;
+    }
+
+    public function setAuthorName(?string $authorName): static
+    {
+        $this->authorName = $authorName;
+
+        return $this;
+    }
+
+    public function getAuthorJob(): ?string
+    {
+        return $this->authorJob;
+    }
+
+    public function setAuthorJob(string $authorJob): static
+    {
+        $this->authorJob = $authorJob;
+
+        return $this;
+    }
+
+    public function getAuthorProfilePhoto(): ?string
+    {
+        return $this->authorProfilePhoto;
+    }
+
+    public function setAuthorProfilePhoto(?string $authorProfilePhoto): static
+    {
+        $this->authorProfilePhoto = $authorProfilePhoto;
 
         return $this;
     }

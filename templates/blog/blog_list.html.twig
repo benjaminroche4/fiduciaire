@@ -31,19 +31,19 @@
                                             {{ post.title }}
                                         </a>
                                     </h3>
-                                    <p class="mt-5 text-sm leading-6 text-gray-600">{{ post.summary }}</p>
+                                    <p class="mt-5 text-sm leading-6 text-gray-600">{{ post.summary | u.truncate(131, '...') }}</p>
                                 </div>
                                 <div class="mt-6 flex border-t border-gray-900/5 pt-6">
                                     <div class="relative flex items-center gap-x-4">
-                                        <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                                        <img src="{{ asset('media/profilePhotos/'~post.authorProfilePhoto) }}" alt="Photo de profil du rédacteur" class="h-10 w-10 rounded-full bg-gray-50">
                                         <div class="text-sm leading-6">
                                             <p class="font-semibold text-gray-900">
                                                 <a href="#">
                                                     <span class="absolute inset-0"></span>
-                                                    Michael Foster
+                                                    {{ post.authorName }}
                                                 </a>
                                             </p>
-                                            <p class="text-gray-600">Co-Founder / CTO</p>
+                                            <p class="text-gray-600">{{ post.authorJob }}</p>
                                         </div>
                                     </div>
                                 </div>
