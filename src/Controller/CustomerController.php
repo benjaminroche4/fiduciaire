@@ -32,7 +32,7 @@ class CustomerController extends AbstractController
 
             $email = (new TemplatedEmail())
                 ->from($contact->getEmail())
-                ->to('contact@uniflow.agency')
+                ->to('contact@fiduciaire-genevoise.ch')
                 ->subject('[Fiduciaire Genevoise] Nouvelle demande pour devenir client')
                 ->htmlTemplate('emails/devenir-client.html.twig')
                 ->context([

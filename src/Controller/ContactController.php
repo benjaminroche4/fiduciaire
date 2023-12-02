@@ -32,7 +32,7 @@ class ContactController extends AbstractController
 
             $emailContact = (new TemplatedEmail())
                 ->from($contact->getEmail())
-                ->to(new Address('contact@uniflow.agency'))
+                ->to(new Address('contact@fiduciaire-genevoise.ch'))
                 ->subject('[Fiduciaire Genevoise] Nouvelle demande de contact')
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
