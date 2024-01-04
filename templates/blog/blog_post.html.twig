@@ -2,13 +2,13 @@
 
 {% block robots %}index, follow{% endblock %}
 {% block title %}{{ post.title }}{% endblock %}
-{% block description %}{{ post.summary | u.truncate(131, '...') }}{% endblock %}
+{% block description %}{{ post.summary |slice(0, 150)  }}...{% endblock %}
 
 {% block ogTitle %}Fiduciaire Genevoise - Blog{% endblock %}
 {% block ogUrl %}https://fiduciaire-genevoise.ch/blog{{ path('app_blog_post', {'slug': post.slug }) }}{% endblock %}
 {% block ogImage %}{{ asset('media/blog/mainPhotos/'~post.mainPhoto) }}{% endblock %}
 {% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
-{% block ogDescription %}{{ post.summary | u.truncate(131, '...') }}{% endblock %}
+{% block ogDescription %}{{ post.summary |slice(0, 150)  }}...{% endblock %}
 
 
 
