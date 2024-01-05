@@ -3,6 +3,7 @@
 {% block robots %}index, follow{% endblock %}
 {% block title %}Contact{% endblock %}
 {% block description %}Contactez-nous au (+41) 022 562 42 39 ou visitez notre siège social à Rue des Alpes 5, 1201 Genève pour des conseils experts.{% endblock %}
+{% block url %}{{ path('app_contact') }}{% endblock %}
 
 {% block ogTitle %}Fiduciaire Genevoise - Contactez-nous{% endblock %}
 {% block ogUrl %}https://fiduciaire-genevoise.ch/contact{% endblock %}
@@ -92,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="sm:col-span-2">
-                                <div class="flex justify-between text-sm leading-6 text-sm">
+                                <div class="flex justify-between leading-6 text-sm">
                                     <label class="block font-semibold text-gray-900">{{ form_label(form.message, 'Message') }}</label>
                                     <p id="phone-description" class="text-gray-400">Optionel</p>
                                 </div>

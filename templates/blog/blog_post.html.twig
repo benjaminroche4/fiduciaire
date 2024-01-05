@@ -3,6 +3,7 @@
 {% block robots %}index, follow{% endblock %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block description %}{{ post.summary |slice(0, 150)  }}...{% endblock %}
+{% block url %}/blog/{{ post.slug }}{% endblock %}
 
 {% block ogTitle %}Fiduciaire Genevoise - Blog{% endblock %}
 {% block ogUrl %}https://fiduciaire-genevoise.ch/blog{{ path('app_blog_post', {'slug': post.slug }) }}{% endblock %}
