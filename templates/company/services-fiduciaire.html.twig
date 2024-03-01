@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}Services fiduciaires{% endblock %}
+{% block description %}Services fiduciaires intégraux pour pilotage d'entreprise : administration, comptabilité, audit, TVA, fiscalité, RH et plus. Accélérez votre croissance avec nos experts.{% endblock %}
+{% block url %}{{ path('app_services_fiduciaire') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Services fiduciaires{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/services-fiduciaire{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Services fiduciaires intégraux pour pilotage d'entreprise : administration, comptabilité, audit, TVA, fiscalité, RH et plus. Accélérez votre croissance avec nos experts.{% endblock %}
+
+{% block body %}
+    <section class="bg-no-repeat bg-cover bg-center" style="background-image: url('{{ asset('media/headers/header-fiduciaire-a-geneve-services.webp') }}')">
+        <div class="px-6 py-24 lg:px-8 bg-main bg-opacity-80">
+            <div class="mx-auto max-w-2xl text-center">
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Services Fiduciaire</h1>
+                <h2 class="mt-6 text-lg leading-8 text-gray-100">Profitez de solutions sur mesure pour le pilotage de votre entreprise et de notre réseau global pour stimuler votre croissance.</h2>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Administration de sociétés</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Dans un paysage juridique dynamique, nos administrateurs spécialisés en administration de sociétés vous guident dans la gouvernance
+                                de votre entreprise à Genève, Suisse. Nous abordons avec expertise les enjeux juridiques, facilitons les interactions avec les tiers et les administrations,
+                                et soutenons l'expansion de votre activité par l'intégration d'outils de pilotage et de gestion financière efficaces.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Comptabilité</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Nos experts en comptabilité à Genève traitent minutieusement votre comptabilité générale pour générer des états financiers précis,
+                                conformes aux normes réglementaires cantonales et fédérales suisses. Nous assistons aussi nos clients dans l'implémentation d'outils de mesure de performance
+                                et dans la gestion efficace de la comptabilité analytique, assurant une vue d'ensemble et une analyse approfondie de la santé financière de votre entreprise.</p>
+                            <div class="mt-6">
+                                <a href="{{ path('app_comptabilite') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Audit & Contrôles</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">L'audit de contrôle restreint, mené par nos réviseurs en Suisse, offre un examen financier ciblé pour évaluer les comptes annuels de votre entreprise,
+                                fournissant une opinion professionnelle fiable. Par ailleurs, notre service d'audit contractuel implique une analyse détaillée, réalisée par un expert, conformément à vos besoins spécifiques.
+                                Nos auditeurs sont dédiés à vous guider vers l'atteinte de vos objectifs financiers et réglementaires, assurant conformité et tranquillité d'esprit dans votre gestion d'entreprise.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Gestion de TVA</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">
+                                Dès le lancement de votre activité entrepreneuriale, la reprise d'un commerce, ou l'ouverture d'une succursale en Suisse, vous devenez redevable de la TVA si vous anticipez un chiffre d'affaires dépassant
+                                100'000 francs dans l'année suivante. Nos spécialistes vous offrent un accompagnement sur mesure dans la gestion de la TVA, l'élaboration des décomptes, et la préparation des déclarations nécessaires, assurant
+                                conformité et optimisation fiscale pour votre entreprise.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Fiscalité</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Nos experts sont à vos côtés pour naviguer à travers les complexités des transactions et des projets d'entreprise, garantissant une adhérence rigoureuse aux règles fiscales actuelles, y compris les aspects
+                                liés à la TVA, les déclarations, les contrôles, et les audits. Nous offrons une assistance personnalisée pour vous aider à maximiser votre conformité fiscale et à optimiser vos stratégies financières. Que ce soit pour une planification
+                                fiscale stratégique, la gestion de la TVA, ou la préparation et révision de déclarations fiscales, notre équipe dédiée assure une guidance experte et approfondie,</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>RH et gestion des salaires</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Notre équipe spécialisée vous guide dans la rédaction de contrats de travail et la préparation des bulletins de salaire, offrant un conseil
+                                juridique solide en droit du travail. Nous vous assistons également dans toutes les démarches administratives nécessaires pour l'affiliation aux différentes caisses suisses (AVS, LPP, Maladie, Accident, Impôt à la source, etc.).
+                                De plus, nous prenons en charge la réalisation complète des déclarations salariales et de l'impôt à la source, vous assurant conformité et sérénité dans la gestion de votre personnel.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Gestion des débiteurs</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Nos experts facilitent le règlement de vos créances, tout en protégeant vos relations clients. Nous optimisons le recouvrement avec des stratégies pré-juridiques, une gestion précise de la comptabilité débiteurs,
+                                et des rappels réguliers. Capables de gérer réquisitions de poursuite et procédures de continuation, nous assurons une gestion efficace et intégrale de vos créances.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Gouvernance</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Nous offrons une vue externe pour une gouvernance d'entreprise équilibrée, incluant clôtures intermédiaires et consolidations pour une visibilité
+                                constante de vos affaires, suivi proactif de débiteurs et créanciers, et gestion de la trésorerie selon l'état des comptes actualisé, assurant une gestion optimale de votre entreprise.</p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white pt-6 pb-12 lg:pb-24">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+                <div class="max-w-lg justify-start">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Services comptables et audits financiers avec Fiduciaire Genevoise</h2>
+                </div>
+                <div class="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
+                    <div class="space-y-2">
+                        <p>Fiduciaire Genevoise se positionne en leader dans le domaine des services comptables et des audits financiers, répondant avec précision aux besoins spécifiques des entreprises suisses.
+                            Notre expertise englobe l'ensemble du spectre comptable, de la préparation des comptes annuels à l'exécution
+                            d'audits conformes aux normes IFRS et au respect du Code de commerce. Nous accompagnons activement les sociétés
+                            mères et leurs entités, garantissant une représentation exacte et fidèle de leur position financière,
+                            tout en valorisant leur patrimoine et en sécurisant les droits de leurs actionnaires.</p>
+                        <p>Notre démarche sur mesure simplifie le processus d'audit et de consolidation, en prenant en compte les aspects critiques tels que l'influence significative et le contrôle,
+                            qu'il soit exclusif ou partagé, sur les filiales. </p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>Nous assurons une harmonisation et une uniformité parfaite des comptes consolidés, ce qui renforce la transparence financière et aide les groupes d'entreprises
+                            dans leurs décisions stratégiques. En collaboration étroite avec les commissaires aux comptes, nous validons
+                            la conformité et l'authenticité des données financières, augmentant ainsi la confiance entre les entreprises
+                            et leurs différents interlocuteurs.</p>
+                        <p>Opter pour Fiduciaire Genevoise signifie choisir un partenaire fiable pour la gestion comptable et financière, assurant à votre société un développement
+                            soutenu et une stabilité financière face aux enjeux économiques contemporains et à venir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

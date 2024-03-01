@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}Conseil entreprise{% endblock %}
+{% block description %}Optimisez la structure juridique et financière de votre entreprise avec nos conseils experts en actes juridiques, réorganisation, consolidation et création de filiales en Suisse.{% endblock %}
+{% block url %}{{ path('app_conseil_entreprise') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Conseil entreprise{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/conseil-entreprise{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Optimisez la structure juridique et financière de votre entreprise avec nos conseils experts en actes juridiques, réorganisation, consolidation et création de filiales en Suisse.{% endblock %}
+
+{% block body %}
+    <section class="bg-no-repeat bg-cover bg-center" style="background-image: url('{{ asset('media/headers/header-fiduciaire-geneve-comptabilite.webp') }}')">
+        <div class="px-6 py-24 lg:px-8 bg-main bg-opacity-80">
+            <div class="mx-auto max-w-2xl text-center">
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Conseil entreprise</h1>
+                <h2 class="mt-6 text-lg leading-8 text-gray-100">Accélérez votre développement et atteignez vos objectifs avec notre soutien. Nos équipes dédiées maximisent le potentiel de votre entreprise.</h2>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Services juridiques</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Les changements légaux au sein de votre entreprise ou de sa direction requièrent la rédaction de procès-verbaux et une réquisition d'inscription conformément
+                                à l'article 16 de l'ORC auprès de l'Office du registre du commerce. Nos équipes vous assistent dans la préparation et la transmission de toute la documentation juridique nécessaire à
+                                l'Office du registre du commerce, assurant la conformité de vos actes juridiques.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Réorganisation & Restructuration</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Depuis 2004, la loi fédérale sur la fusion encadre les opérations de réorganisation et restructuration d'entreprises en Suisse, instaurant des procédures complexes. La neutralité fiscale est possible sous conditions spécifiques, offrant un cadre légal pour les transformations d'entreprise.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                            <h3>Consolidation</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">
+                                Nous offrons un accompagnement spécialisé dans la consolidation financière et l'évaluation des structures organisationnelles des entreprises pour identifier les entités à consolider.
+                                Notre processus inclut l'identification et l'élimination des transactions intra-groupe, l'harmonisation des méthodes comptables, et la préparation des états financiers consolidés,
+                                permettant ainsi de fournir des conseils stratégiques éclairés.</p>
+                    </div>
+                    <div class="flex flex-col sm:m-2 border shadow-sm rounded-md border-gray-900/10 bg-gray-50 p-4">
+                        <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                            </svg>
+                           <h3>Filiale, Fondation et Holding</h3>
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                            <p class="text-justify">Nous guidons nos clients dans l'établissement de filiales, fondations, ou holdings en Suisse, conseillant sur la forme juridique optimale et rédigeant les statuts
+                                en considérant les spécificités de chaque projet.</p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white pt-6 pb-12 lg:pb-24">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+                <div class="max-w-lg justify-start">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Expertise avancée en comptabilité et consolidation financière</h2>
+                </div>
+                <div class="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
+                    <div class="space-y-2">
+                        <p>Fiduciaire Genevoise se distingue par son expertise en gestion comptable et consolidation financière, adaptée aux
+                            exigences des entreprises en Suisse. Notre savoir-faire couvre toute la palette de la comptabilité, des comptes
+                            annuels aux comptes consolidés, en conformité avec les normes IFRS et le Code de commerce. Nous soutenons les
+                            sociétés mères et leurs filiales, en assurant une représentation fidèle de leur situation financière, optimisant
+                            les capitaux propres et les droits de vote des actionnaires.</p>
+                        <p>Notre approche personnalisée facilite le processus de consolidation, tenant compte de l'influence notable et
+                            du contrôle exclusif ou conjoint au sein des participations. </p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>Nous veillons à l'équivalence et à la cohérence des comptes consolidés, améliorant ainsi la transparence financière
+                            et la prise de décision stratégique pour les sociétés du groupe. En partenariat avec les commissaires aux
+                            comptes, nous établissons et vérifions la régularité et la sincérité des informations financières, renforçant
+                            ainsi la confiance des parties prenantes.</p>
+                        <p>Choisir Fiduciaire Genevoise, c'est opter pour une gestion comptable et financière de premier ordre, garantissant
+                            à votre entreprise une croissance durable et une solidité financière face aux défis économiques actuels et futurs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
