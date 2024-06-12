@@ -47,6 +47,12 @@ class CompanyController extends AbstractController
     #[Route('/corporate-finance', name: 'app_corporate_finance')]
     public function corporateFinance(): Response
     {
-        return $this->render('company/corporate_finance.html.twig');
+        return $this->render('company/corporate-finance.html.twig');
+    }
+
+    #[Route('/faq', name: 'app_faq')]
+    public function faq(): Response
+    {
+        return $this->render('company/faq.html.twig');
     }
 }

@@ -52,13 +52,13 @@
             gtag('config', 'AW-11470625350');
         </script>
     </head>
-    <body>
+    <body class="mt-20">
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3QGTNGV" height="0" width="0" style="display:none;visibility:hidden">
             </iframe>
         </noscript>
-        <header class="bg-white shadow z-10 relative">
+        <header class="bg-white shadow z-50 fixed w-full top-0">
             <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex items-center gap-x-8">
                     <a href="{{ path('app_home') }}" class="-m-1.5 p-1.5">
@@ -152,6 +152,17 @@
                                             <a href="{{ path('app_conseil_entreprise') }}" class="text-base font-semibold leading-7 text-gray-900">Conseil entreprise</a>
                                         </div>
                                     </div>
+                                    <div class="space-y-2 py-6">
+                                        <div>
+                                            <a href="{{ path('app_a_propos') }}" class="text-base font-semibold leading-7 text-gray-900">À propos</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ path('app_faq') }}" class="text-base font-semibold leading-7 text-gray-900">FAQ</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ path('app_blog') }}" class="text-base font-semibold leading-7 text-gray-900">Blog</a>
+                                        </div>
+                                    </div>
                                     <div class="py-6 text-center gap-y-10">
                                         <a href="{{ path('app_contact') }}" class="mb-3 -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-main hover:bg-second border-solid border border-main hover:border-second transition duration-200">Contactez-nous <span aria-hidden="true" class="ml-2">&rarr;</span></a>
                                         <a href="{{ path('app_devenir_client') }}" class="mb-3 -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 border-solid border border-main hover:bg-gray-100 transition duration-200">Devenir client</a>
@@ -232,6 +243,9 @@
                                         <a href="{{ path('app_contact') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Contactez-nous</a>
                                     </li>
                                     <li>
+                                        <a href="{{ path('app_faq') }}" class="text-sm leading-6 text-gray-300 hover:text-white">FAQ</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ path('app_blog') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a>
                                     </li>
                                 </ul>
@@ -264,7 +278,7 @@
                     </div>
                 </div>
                 <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p class="text-xs leading-5 text-gray-400">&copy; {{ 'now' | date('Y') }} FG Fiduciaire Genvoise. Tous droits réservés.</p>
+                    <p class="text-xs leading-5 text-gray-400">&copy; {{ 'now' | date('Y') }} FG Fiduciaire Genvoise SA. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>

@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}FAQ{% endblock %}
+{% block description %}Découvrez les réponses aux questions fréquemment posées sur les services de notre fiduciaire à Genève. Solutions personnalisées en comptabilité, fiscalité et gestion d'entreprise.{% endblock %}
+{% block url %}{{ path('app_a_propos') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - FAQ{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/a-propos{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Découvrez les réponses aux questions fréquemment posées sur les services de notre fiduciaire à Genève. Solutions personnalisées en comptabilité, fiscalité et gestion d'entreprise.{% endblock %}
+
+{% block body %}
+    <section class="bg-no-repeat bg-cover bg-center" style="background-image: url('{{ asset('media/headers/header-fiduciaire-geneve.webp') }}')">
+        <div class="px-6 py-24 lg:px-8 bg-main bg-opacity-80">
+            <div class="mx-auto max-w-2xl text-center">
+                <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">FAQ</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-100">Découvrez les réponses aux questions fréquemment posées sur les services de notre fiduciaire à Genève.</p>
+            </div>
+        </div>
+    </section>
+    <section class="relative bg-white">
+        <div class="mx-auto grid max-w-5xl">
+            <div class="bg-white">
+                <div class="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+                    <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">Questions/Réponses</h2>
+                    <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+                        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What&#039;s the best thing about Switzerland?</dt>
+                            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                                <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                            </dd>
+                        </div>
+                        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What&#039;s the best thing about Switzerland?</dt>
+                            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                                <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                            </dd>
+                        </div>
+                        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What&#039;s the best thing about Switzerland?</dt>
+                            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                                <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                            </dd>
+                        </div>
+                        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What&#039;s the best thing about Switzerland?</dt>
+                            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                                <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                            </dd>
+                        </div>
+                        <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            <dt class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">What&#039;s the best thing about Switzerland?</dt>
+                            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                                <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                            </dd>
+                        </div>
+                        <!-- More questions... -->
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
