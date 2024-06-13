@@ -26,8 +26,24 @@
         </div>
     </section>
     <section class="bg-white py-24 sm:py-28">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            {{ post.content | raw }}
+        <div class="mx-auto max-w-5xl grid grid-cols-3 px-6 lg:px-8 md:gap-x-8">
+                <div class="col-span-3 md:col-span-2">
+                    {{ post.content | raw }}
+                </div>
+                <div class="hidden md:block lg:mx-6">
+                    <div class="p-6 rounded-lg bg-gray-50">
+                        <div class="flex justify-center">
+                            <img src="{{ asset('media/profilePhotos/'~post.authorProfilePhoto) }}" alt="Photo de profil de {{ post.authorName }}" class="h-20 w-20 rounded-full bg-gray-100">
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="font-semibold">{{ post.authorName }}</p>
+                            <p class="text-sm">{{ post.authorJob }}</p>
+                        </div>
+                        <div class="mt-5 flex justify-center">
+                            <a href="{{ path('app_contact') }}" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-gray-100 transition duration-200">Nous contacter</a>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 {% endblock %}
