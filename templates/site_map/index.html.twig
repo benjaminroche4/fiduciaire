@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}Sitemap{% endblock %}
+{% block description %}Sitemap de notre fiduciaire en Suisse : Accédez facilement à toutes nos pages dédiées à la comptabilité, fiscalité et gestion d'entreprise.{% endblock %}
+{% block url %}{{ path('app_site_map') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Sitemap{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/sitemap{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Sitemap de notre fiduciaire en Suisse : Accédez facilement à toutes nos pages dédiées à la comptabilité, fiscalité et gestion d'entreprise.{% endblock %}
+
+{% block body %}
+    <section class="bg-main px-6 py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Sitemap</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-100">Sitemap de notre fiduciaire en Suisse basée à Genève : Accédez facilement à toutes nos pages dédiées à la comptabilité, fiscalité et gestion d'entreprise.</p>
+        </div>
+    </section>
+
+    <section class="bg-white px-6 py-12 lg:py-24 lg:px-8">
+        <div class="mx-auto max-w-4xl text-base leading-7 text-gray-700 space-y-8">
+            <div>
+                <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Services</h2>
+                <div class="mt-8">
+                    <ul class="list-disc space-y-4">
+                        <li>
+                            <a href="{{ path('app_services_fiduciaire') }}" class="text-lg font-second">Services fiduciaire</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_audit_et_controles') }}" class="text-lg font-second">Audit et contrôles</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_corporate_finance') }}" class="text-lg font-second">Corporate finance</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_conseil_entreprise') }}" class="text-lg font-second">Conseil entreprise</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_controle_restreint') }}" class="text-lg font-second">Contrôle restreint</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_comptabilite') }}" class="text-lg font-second">Comptabilité</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Support</h2>
+                <div class="mt-8">
+                    <ul class="list-disc space-y-4">
+                        <li>
+                            <a href="{{ path('app_a_propos') }}" class="text-lg font-second">À propos</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_contact') }}" class="text-lg font-second">Contactez-nous</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_faq') }}" class="text-lg font-second">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_blog') }}" class="text-lg font-second">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Compte client</h2>
+                <div class="mt-8">
+                    <ul class="list-disc space-y-4">
+                        <li>
+                            <a href="{{ path('app_connexion') }}" class="text-lg font-second">Connexion</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_devenir_client') }}" class="text-lg font-second">Devenir client</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Légal</h2>
+                <div class="mt-8">
+                    <ul class="list-disc space-y-4">
+                        <li>
+                            <a href="{{ path('app_mentions_legales') }}" class="text-lg font-second">Mentions légales</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_donnees_personnelles') }}" class="text-lg font-second">Données personnelles</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Nos articles de Blog</h2>
+                <div class="mt-8">
+                    <ul class="list-disc space-y-4">
+                        {% for post in posts %}
+                            <li>
+                                <a href="{{ path('app_blog_post', {'slug': post.slug }) }}" class="text-lg font-second">{{ post.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
