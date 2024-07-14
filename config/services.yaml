@@ -6,7 +6,7 @@
 parameters:
     excluded_routes:
         - app_contact
-        - app_connexion
+        - app_login
         - app_devenir_client
         - app_devenir_client_traitement
 
