@@ -1,0 +1,105 @@
+{% extends 'admin/base_admin.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block body %}
+    <section class="border-b border-gray-200 bg-white py-5 px-6 flex justify-between">
+        <div class="flex gap-x-3.5 items-center">
+            <h3 class="text-xl font-semibold leading-6 text-gray-900">Nouvel article</h3>
+        </div>
+    </section>
+
+    <section class="max-3xl px-6 py-5 mt-5">
+        {{ form_start(form) }}
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+                    <div>
+                        <h2 class="text-base font-semibold leading-7 text-gray-900">Infos générales</h2>
+                    </div>
+
+                    <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+                        <div class="col-span-full">
+                            <label class="block text-sm font-medium leading-6 text-gray-900">{{ form_label(form.title, 'Titre de l\'article') }}</label>
+                            <div class="mt-2">
+                                {{ form_widget(form.title, {'attr': {'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                            </div>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.title) }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <div class="flex justify-between text-sm leading-6">
+                                <label class="block text-sm font-medium leading-6 text-gray-900">{{ form_label(form.summary, 'Résumé') }}</label>
+                                <p id="phone-description" class="text-gray-400">Max 255 caractères</p>
+                            </div>
+                            <div class="mt-2">
+                                {{ form_widget(form.summary, {'attr': {'rows': '2', 'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                            </div>
+                            <p class="mt-3 text-sm leading-6 text-gray-600">Visible dans la meta description ainsi que le résumé de l'article.</p>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.summary) }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <label class="block text-sm font-medium leading-6 text-gray-900">{{ form_label(form.content, 'Contenu') }}</label>
+                            <div class="mt-2">
+                                {{ form_widget(form.content, {'attr': {'rows': '4', 'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                            </div>
+                            <p class="mt-3 text-sm leading-6 text-gray-600">Accepte les balises HTML.</p>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.content) }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <label class="block text-sm font-medium leading-6 text-gray-900">{{ form_label(form.mainPhoto, 'Photo de couverture') }}</label>
+                            <div class="mt-2">
+                                {{ form_widget(form.mainPhoto) }}
+                            </div>
+                            <p class="mt-3 text-sm leading-6 text-gray-600">Format "Webp" seulement et max 200ko.</p>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.mainPhoto) }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <label class="block text-sm font-medium leading-6 text-gray-900">{{ form_label(form.category, 'Categorie') }}</label>
+                            <div class="mt-2">
+                                {{ form_widget(form.category, {'attr': {'rows': '4', 'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                            </div>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.category) }}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-full">
+                            <label class="block text-sm font-medium leading-6 text-gray-900">{{ form_label(form.authorName, 'Rédacteur') }}</label>
+                            <div class="mt-2">
+                                {{ form_widget(form.authorName, {'attr': {'rows': '4', 'class':'block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6'}}) }}
+                            </div>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.authorName) }}</p>
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-5 font-semibold flex items-center text-sm">
+                            {{ form_widget(form.status, {'attr': {'class' : 'h-4 w-4 rounded border-gray-900 border-2 text-main focus:ring-main'}}) }}
+                            <label class="ml-3 block text-sm leading-6 text-gray-900">{{ form_label(form.status, 'Je souhaite publier l\'article.') }}</label>
+                            <div class="text-red-600 text-sm mt-1">
+                                <p>{{ form_errors(form.status) }}</p>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+                <button type="submit" class="text-sm font-semibold leading-6 text-white bg-main px-3.5 py-2.5 rounded-lg hover:bg-second transition duration-200">Publier</button>
+            </div>
+        {{ form_end(form) }}
+
+    </section>
+{% endblock %}
+
