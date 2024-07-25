@@ -26,8 +26,8 @@ class PostType extends AbstractType
                         'message' => 'Ce champ ne ne doit pas être vide.',
                     ]),
                     new Assert\Length([
-                        'max' => 60,
-                        'maxMessage' => 'Ce champ doit faire au max. 60 caractères.',
+                        'max' => 100,
+                        'maxMessage' => 'Ce champ doit faire au max. {{ limit }} caractères.',
                     ])
                 ],
             ])
@@ -47,8 +47,8 @@ class PostType extends AbstractType
                         'message' => 'Ce champ ne ne doit pas être vide.',
                     ]),
                     new Assert\Length([
-                        'max' => 4096,
-                        'maxMessage' => 'Ce champ doit faire au max. 255 caractères.',
+                        'max' => 255,
+                        'maxMessage' => 'Ce champ doit faire au max. {{ limit }} caractères.',
                     ])
                 ],
             ])

@@ -86,6 +86,8 @@ class AdminBlogController extends AbstractController
 
             $entityManager->persist($post);
             $entityManager->flush();
+
+            return $this->redirectToRoute('app_admin_blog');
         }
 
 
