@@ -5,7 +5,7 @@
 {% block description %}{{ post.summary |slice(0, 147)  }}...{% endblock %}
 {% block url %}/blog/{{ post.slug }}{% endblock %}
 
-{% block ogTitle %}Fiduciaire Genevoise - Blog{% endblock %}
+{% block ogTitle %}Fiduciaire Genevoise - {{ post.title|slice(0, 57)  }}...{% endblock %}
 {% block ogUrl %}https://fiduciaire-genevoise.ch/blog{{ path('app_blog_post', {'slug': post.slug }) }}{% endblock %}
 {% block ogImage %}{{ asset('media/blog/mainPhotos/'~post.mainPhoto) }}{% endblock %}
 {% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
