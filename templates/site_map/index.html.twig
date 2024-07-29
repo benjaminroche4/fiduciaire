@@ -23,7 +23,7 @@
         <div class="mx-auto max-w-4xl text-base leading-7 text-gray-700 space-y-8">
             <div>
                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Services</h2>
-                <div class="mt-8">
+                <div class="mt-8 px-6">
                     <ul class="list-disc space-y-4">
                         <li>
                             <a href="{{ path('app_services_fiduciaire') }}" class="text-lg font-second">Services fiduciaire</a>
@@ -48,7 +48,7 @@
             </div>
             <div>
                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Support</h2>
-                <div class="mt-8">
+                <div class="mt-8 px-6">
                     <ul class="list-disc space-y-4">
                         <li>
                             <a href="{{ path('app_a_propos') }}" class="text-lg font-second">À propos</a>
@@ -67,7 +67,7 @@
             </div>
             <div>
                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Compte client</h2>
-                <div class="mt-8">
+                <div class="mt-8 px-6">
                     <ul class="list-disc space-y-4">
                         <li>
                             <a href="{{ path('app_login') }}" class="text-lg font-second">Connexion</a>
@@ -80,7 +80,7 @@
             </div>
             <div>
                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Légal</h2>
-                <div class="mt-8">
+                <div class="mt-8 px-6">
                     <ul class="list-disc space-y-4">
                         <li>
                             <a href="{{ path('app_mentions_legales') }}" class="text-lg font-second">Mentions légales</a>
@@ -93,7 +93,7 @@
             </div>
             <div>
                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">Nos articles de Blog</h2>
-                <div class="mt-8">
+                <div class="mt-8 px-6">
                     <ul class="list-disc space-y-4">
                         {% for post in posts %}
                             <li>
@@ -105,7 +105,4 @@
             </div>
         </div>
     </section>
-
-
-
 {% endblock %}
