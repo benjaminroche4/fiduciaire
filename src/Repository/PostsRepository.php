@@ -16,10 +16,21 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class PostsRepository extends ServiceEntityRepository
 {
+    /**
+     * The constructor.
+     *
+     * @param ManagerRegistry $registry
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Posts::class);
     }
+
+    /**
+     * Find all published posts.
+     *
+     * @return array<Posts>
+     */
     public function findAllPublished(): array
     {
         return $this->createQueryBuilder('p')
@@ -30,6 +41,11 @@ class PostsRepository extends ServiceEntityRepository
         ;
     }
 
+    /**
+     * Find the last three posts.
+     *
+     * @return array<Posts>
+     */
     public function findLastThree(): array
     {
         return $this->createQueryBuilder('p')
@@ -39,5 +55,24 @@ class PostsRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
         ;
+    }
+
+    /**
+     * Find the recommended posts for the current post.
+     *
+     * @param string $currentPost
+     * @param int $limit
+     * @return array<Posts>
+     */
+    public function findRecommendedPosts(Posts $currentPost, int $limit = 3): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.id != :currentPost')
+            ->andWhere('p.status = true')
+            ->orderBy('p.createdAt', 'DESC')
+            ->setParameter('currentPost', $currentPost)
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
     }
 }

@@ -29,19 +29,18 @@ class BlogController extends AbstractController
     }
 
     #[Route('/blog/{slug}', name: 'app_blog_post')]
-    public function blogPost(string $slug, Request $request): Response
+    public function blogPost(string $slug): Response
     {
         $post = $this->postsRepository->findOneBy(['slug' => $slug]);
+        $recommendedPosts = $this->postsRepository->findRecommendedPosts($post);
 
         if (!$post || !$post->isStatus()) {
             throw $this->createNotFoundException('404, Page non trouvée');
         }
 
-        $lastPosts = $this->postsRepository->findLastThree();
-
         return $this->render('blog/blog_post.html.twig', [
             'post' => $post,
-            'lastPosts' => $lastPosts
+            'recommendedPosts' => $recommendedPosts,
         ]);
     }
 }
