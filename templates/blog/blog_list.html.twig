@@ -23,6 +23,10 @@
     </section>
     <section class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="flex gap-x-3.5 pb-10 items-center">
+                <h3 class="text-lg sm:text-xl font-semibold leading-6 text-gray-900">Tous nos articles</h3>
+                <p class="font-main border border-gray-400 text-gray-600 px-2 py-1 rounded-full text-xs">{{ allPosts | length }}</p>
+            </div>
             <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {% for post in allPosts %}
                     <article class="flex flex-col items-start justify-between">

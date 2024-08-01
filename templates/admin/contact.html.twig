@@ -6,4 +6,7 @@
     <div class="border-b border-gray-200 bg-white py-5 px-6">
         <h3 class="text-xl font-semibold leading-6 text-gray-900">Contact</h3>
     </div>
+    {% for contact in lastContacts %}
+        {{ contact.message }} <br/><br/>
+    {% endfor %}
 {% endblock %}
