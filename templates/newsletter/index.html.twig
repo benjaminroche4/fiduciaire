@@ -1,6 +1,15 @@
 {% extends 'newsletter/base_newsletter.html.twig' %}
 
+{% block robots %}index, follow{% endblock %}
 {% block title %}Newsletter{% endblock %}
+{% block description %}Recevez conseils fiscaux et actualités financières en Suisse. Abonnez-vous à notre newsletter fiduciaire.{% endblock %}
+{% block url %}{{ path('app_newsletter') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Newsletter{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/newsletter{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Recevez conseils fiscaux et actualités financières en Suisse. Abonnez-vous à notre newsletter fiduciaire.{% endblock %}
 
 {% block body %}
     <section class="flex min-h-screen flex-col justify-center px-6 py-12 lg:px-8">
