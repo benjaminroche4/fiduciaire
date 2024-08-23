@@ -13,7 +13,7 @@
 
 {% block body %}
     <section class="flex min-h-full flex-col justify-center bg-no-repeat bg-cover bg-center" style="background-image: url('{{ asset('media/headers/header-fiduciaire-genevoise-geneve-suisse.webp') }}')">
-        <div class="bg-main opacity-90 px-6 py-24  lg:px-8 ">
+        <div class="bg-main bg-opacity-80 px-6 py-24  lg:px-8 ">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-6 w-auto" src="{{ asset('media/logo/logo-blanc.webp') }}" alt="Fiduciaire Genevoise Logo">
                 <h1 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Connexion à votre espace client</h1>
@@ -52,7 +52,7 @@
                            value="{{ csrf_token('authenticate') }}"
                     >
                     <div>
-                        <button type="submit" class="flex w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm hover:bg-gray-100 transition duration-200">Connexion</button>
+                        <button type="submit" class="flex w-full justify-center rounded-full bg-white px-4 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 transition duration-200">Connexion</button>
                     </div>
                 </form>
                 <p class="mt-10 text-center text-sm text-gray-400 font-main">
