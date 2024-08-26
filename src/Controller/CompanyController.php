@@ -71,7 +71,7 @@ class CompanyController extends AbstractController
     #[Route('/services-fiduciaire/administration-de-societes', name: 'app_admin_societes')]
     public function adminSociete(): Response
     {
-        return $this->render('company/administration-societe.html.twig');
+        return $this->render('company/administration-societes.html.twig');
     }
 
     #[Route('/services-fiduciaire/audit-et-controles', name: 'app_services_audit_controles')]
