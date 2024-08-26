@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}Audit et contrôles{% endblock %}
+{% block description %}Renforcez la fiabilité de votre entreprise à Genève avec nos services d'audit et de contrôle : audits financiers, contrôles internes et conseils sur mesure pour une gestion transparente.{% endblock %}
+{% block url %}{{ path('app_services_audit_controles') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Audit et contrôles{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/audit-et-controles{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Renforcez la fiabilité de votre entreprise à Genève avec nos services d'audit et de contrôle : audits financiers, contrôles internes et conseils sur mesure pour une gestion transparente.{% endblock %}
+
+{% block body %}
+    <section class="bg-main px-6 py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Audit et contrôles</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-100">Renforcez la fiabilité de votre entreprise à Genève avec nos services d'audit et de contrôle : audits financiers, contrôles internes et conseils sur mesure pour une gestion transparente.</p>
+        </div>
+    </section>
+    <section class="bg-white px-6 py-12 lg:py-24 lg:px-8">
+        <div class="mx-auto max-w-4xl text-base leading-7 text-gray-700">
+            <h2 class="mt-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Introduction à l'Audit et au Contrôle</h2>
+            <figure class="text-lg mt-10 border-l border-red-custom pl-9">
+                <blockquote class="font-semibold text-gray-900">
+                    L'audit et les contrôles sont essentiels pour garantir la sécurité et la santé financière d'une entreprise. Grâce à un système de contrôle interne efficace, les sociétés peuvent mieux gérer les risques et améliorer leurs processus. Ce processus permet d'évaluer les performances financières tout en assurant la conformité avec les normes en vigueur.
+                </blockquote>
+            </figure>
+            <div class="mt-10">
+                <h3 class="mt-8 text-lg underline">L'Importance de l'Audit</h3>
+                <p class="mt-8 text-lg">
+                    L'audit constitue une vérification cruciale des comptes d'une entreprise. Il permet de s'assurer que les états financiers reflètent fidèlement la réalité économique. Grâce à un audit bien mené, les entreprises reçoivent une opinion professionnelle fiable qui peut influencer leurs décisions stratégiques. Un audit minutieux contribue également à renforcer la sécurité des opérations et à rassurer les investisseurs sur la santé financière de l'entreprise.
+                </p>
+                <h3 class="mt-8 text-lg underline">2 types d'audit légaux en Suisse :</h3>
+                <p class="mt-8 text-lg">
+                    <strong class="underline">Le contrôle ordinaire</strong> est une vérification régulière des comptes publics par un organe de révision indépendant, qui examine la conformité, la régularité et la fidélité des comptes. <br/><br/>
+                    <strong class="underline">Le contrôle restreint</strong> est une vérification simplifiée applicable aux petites et moyennes entreprises (PME), où l'examen se limite à des tests de plausibilité sur les informations financières, sans audit complet.
+                </p>
+                <p class="mt-8 text-lg">
+                    <strong>L'opting-out du contrôle restreint en Suisse permet à une petite entreprise de renoncer à la révision des comptes par un organe de révision</strong>, à condition que tous les actionnaires y consentent et que l'entreprise ne dépasse pas certains seuils financiers. Cette option vise à réduire les coûts administratifs pour les petites entreprises, les critères pour en bénéficier sont:
+                </p>
+                <p class="mt-8 text-lg">
+                    <span class="font-semibold underline">Taille de l'entreprise :</span> L'entreprise ne doit pas dépasser deux des trois seuils suivants pendant deux exercices consécutifs : 10 millions de francs suisses de total du bilan, 20 millions de francs suisses de chiffre d'affaires, et 50 employés en moyenne annuelle.
+                </p>
+                <p class="mt-8 text-lg">
+                    <span class="font-semibold underline">Consentement unanime :</span> Tous les actionnaires doivent donner leur consentement écrit pour renoncer au contrôle restreint.
+                </p>
+                <p class="mt-8 text-lg">
+                    <span class="font-semibold underline">Structure juridique :</span> L'entreprise doit être une société anonyme (SA) ou une société à responsabilité limitée (Sàrl).
+                </p>
+                <h3 class="mt-8 text-lg underline">Audit Contractuel : Une Analyse Personnalisée</h3>
+                <p class="mt-8 text-lg">
+                    Notre service d'audit contractuel implique une analyse détaillée, menée par un expert. Cela répond spécifiquement aux exigences de votre entreprise, assurant conformité et tranquillité d'esprit. L'audit contractuel permet d'identifier des opportunités d'amélioration au sein de votre organisation, contribuant ainsi à optimiser vos opérations et à renforcer votre position sur le marché.
+                </p>
+                <h3 class="mt-8 text-lg underline">Rôle des Auditeurs</h3>
+                <p class="mt-8 text-lg">
+                    <strong>Les auditeurs jouent un rôle clé dans le processus de révision</strong>. Ils travaillent en étroite collaboration avec le conseil d'administration, car ils sont nommés par ce dernier afin garantir la qualité et la sécurité des informations financières ainsi que la protection des actionnaires. Leur travail ne se limite pas à un examen des comptes ; ils fournissent également des recommandations pratiques pour améliorer les systèmes de contrôle interne et les processus de gestion.
+                </p>
+                <h3 class="mt-8 text-lg underline">Systèmes de Contrôle Interne</h3>
+                <p class="mt-8 text-lg">
+                    Un système de contrôle interne robuste est fondamental pour toutes les entreprises. Il permet de sécuriser les processus et d'augmenter la confiance des clients en leurs rapports financiers. <strong>Un système efficace aide à prévenir les fraudes et à garantir que toutes les opérations sont conformes aux politiques de l'entreprise</strong>. Cela contribue directement à la sécurité générale de votre entreprise.
+                </p>
+                <h3 class="mt-8 text-lg underline">Mesures de Sécurité et Conformité</h3>
+                <p class="mt-8 text-lg">
+                    <strong>Nous mettons en œuvre des mesures de sécurité strictes pour assurer la conformité avec les normes en vigueur</strong>. Cela protège non seulement l'entreprise, mais également ses clients et partenaires. En garantissant la sécurité des données et des transactions, nous aidons nos clients à établir des relations de confiance, tout en renforçant les contrôles internes.
+                </p>
+                <h3 class="mt-8 text-lg underline">Amélioration Continue des Processus</h3>
+                <p class="mt-8 text-lg">
+                    L'audit ne se limite pas à un examen ponctuel. <strong>C'est un processus continu d'amélioration qui aide les entreprises à prendre des décisions éclairées basées sur des analyses approfondies</strong>. En intégrant les résultats de l'audit dans leur stratégie de gestion, les entreprises peuvent s'adapter aux évolutions du marché et optimiser leur performance, tout en assurant la sécurité.
+                </p>
+                <h3 class="mt-8 text-lg underline">Rapport d’Audit : Une Œuvre de Transparence</h3>
+                <p class="mt-8 text-lg">
+                    Le rapport d'audit est une œuvre essentielle qui présente les résultats de l'audit. Ce "compte rendu" offre une vue d'ensemble claire de la situation financière de l'entreprise et des recommandations pour l'amélioration. <strong>La transparence des résultats renforce également la crédibilité de l'entreprise auprès des investisseurs et des partenaires, assurant une meilleure sécurité</strong>.
+                </p>
+                <h3 class="mt-8 text-lg underline">Audit et Gestion des Risques</h3>
+                <p class="mt-8 text-lg">
+                    <strong>L'audit joue un rôle prépondérant dans la gestion des risques</strong>. En identifiant les faiblesses potentielles, il permet aux entreprises d'anticiper et de réduire les impacts négatifs. Cette approche proactive est essentielle pour maintenir la sécurité financière et assurer la pérennité des entreprises. Des contrôles rigoureux peuvent atténuer les risques et protéger les actifs.
+                </p>
+                <h3 class="mt-8 text-lg underline">Confiance et Relations Clients</h3>
+                <p class="mt-8 text-lg">
+                    Un audit rigoureux renforce la confiance entre l'entreprise et ses clients. Cela démontre un engagement envers la transparence et la qualité des services offerts. <strong>En assurant une gestion saine de leurs finances, les entreprises peuvent fidéliser leurs clients et développer des relations durables, en garantissant leur sécurité</strong>.
+                </p>
+                <h3 class="mt-8 text-lg underline">Objectifs Stratégiques de l'Audit</h3>
+                <p class="mt-8 text-lg">
+                    Les objectifs d'un audit vont au-delà de la simple conformité. Ils incluent l'amélioration des processus, l'augmentation de la rentabilité et le renforcement de la santé financière. <strong>Chaque audit est conçu pour aligner les opérations de l'entreprise avec ses objectifs stratégiques</strong>, tout en assurant une solide base de sécurité.
+                </p>
+                <h3 class="mt-8 text-lg underline">Pourquoi Choisir Notre Cabinet ?</h3>
+                <p class="mt-8 text-lg">
+                    Choisir <strong>notre société fiduciaire en Suisse, c'est opter pour l'excellence</strong>. Nous disposons d'une équipe d'experts qui s'engagent à fournir des prestations de haute qualité adaptées à chaque client. Notre approche personnalisée nous permet de répondre aux besoins spécifiques de chaque entreprise, en veillant à la sécurité de leurs opérations.
+                </p>
+                <h3 class="mt-8 text-lg underline">Conclusion : Une Approche Globale de l’Audit</h3>
+                <p class="mt-8 text-lg">
+                    En conclusion, <strong>nos services d'audit et de contrôle sont conçus pour répondre aux besoins spécifiques de votre entreprise</strong>. Que vous soyez une fiduciaire à Genève ou une société suisse, nous sommes là pour vous accompagner vers la réussite.
+                </p>
+                <h3 class="mt-8 text-lg underline">Contactez-nous</h3>
+                <p class="mt-8 text-lg">
+                    Pour en savoir plus sur nos services d’audit et de contrôle, <a href="{{ path('app_contact') }}" class="font-second hover:text-gray-500">n’hésitez pas à nous contacter</a>. Ensemble, travaillons à atteindre vos objectifs financiers et réglementaires, tout en garantissant votre sécurité.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

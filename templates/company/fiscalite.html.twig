@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block robots %}index, follow{% endblock %}
+{% block title %}Fiscalité{% endblock %}
+{% block description %}Maîtrisez votre fiscalité à Genève avec notre fiduciaire experte : déclaration d'impôts, planification fiscale et conseils sur mesure pour particuliers et entreprises.{% endblock %}
+{% block url %}{{ path('app_fiscalite') }}{% endblock %}
+
+{% block ogTitle %}Fiduciaire Genevoise - Fiscalité{% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/fiscalite{% endblock %}
+{% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
+{% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
+{% block ogDescription %}Maîtrisez votre fiscalité à Genève avec notre fiduciaire experte : déclaration d'impôts, planification fiscale et conseils sur mesure pour particuliers et entreprises.{% endblock %}
+
+{% block body %}
+
+    <section class="bg-main px-6 py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h1 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-6xl">Fiscalité</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-100">Maîtrisez votre fiscalité à Genève avec notre fiduciaire experte : déclaration d'impôts, planification fiscale et conseils sur mesure pour particuliers et entreprises.</p>
+        </div>
+    </section>
+    <section class="bg-white px-6 py-12 lg:py-24 lg:px-8">
+        <div class="mx-auto max-w-4xl text-base leading-7 text-gray-700">
+            <p class="mt-2 text-lg">La fiscalité est un domaine fondamental qui touche à la fois les particuliers et les entreprises. <strong>Elle englobe l'ensemble des lois et des règlements qui déterminent comment les impôts sont collectés par les autorités publiques</strong>. Une gestion efficace de la fiscalité est essentielle pour garantir la conformité avec les lois en vigueur tout en optimisant la situation financière.</p>
+            <h2 class="mt-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Qu'est-ce que la Fiscalité ?</h2>
+            <figure class="text-lg mt-10 border-l border-red-custom pl-9">
+                <blockquote class="font-semibold text-gray-900">
+                    La fiscalité, au sens large, représente l'ensemble des mécanismes par lesquels l'État, les collectivités
+                    locales et d'autres organismes publics financent leurs activités par le biais des impôts. Elle se compose
+                        de plusieurs types d'impôts, tels que l'impôt sur le revenu, l'impôt sur la fortune, la TVA, l'impôt sur les sociétés.
+                    Pour les entreprises, comprendre ces mécanismes est crucial pour gérer correctement leurs finances,
+                    respecter les obligations légales et éviter les sanctions. La fiscalité ne concerne pas uniquement les grandes
+                    entreprises ; les petites et moyennes entreprises (PME) et les indépendants doivent également prêter une attention
+                    particulière à leur gestion fiscale.
+                    <p></p>
+                </blockquote>
+            </figure>
+            <div class="mt-10">
+                <h3 class="mt-8 text-lg underline">L'Importance du Droit Fiscal pour Votre Entreprise</h3>
+                <p class="mt-8 text-lg">
+                    Le droit fiscal est la branche du droit qui régit l'imposition des particuliers et des entreprises. Il est essentiel pour toute entité de comprendre les obligations fiscales qui lui incombent, qu'il s'agisse de déclarations d'impôts, de paiements, ou de respect des délais. <strong>Une maîtrise approfondie du droit fiscal permet d'éviter des erreurs coûteuses, telles que des pénalités pour retard de paiement ou des redressements fiscaux</strong>. De plus, une bonne connaissance des lois fiscales offre des opportunités d'optimisation qui peuvent significativement améliorer la situation financière d'une entreprise ou d'un individu. Nos experts vous accompagnent pour vous assurer que toutes les lois fiscales applicables sont respectées, tout en vous aidant à maximiser vos avantages fiscaux.
+                </p>
+                <h3 class="mt-8 text-lg underline">Services Juridique : Des Solutions Personnalisées pour Votre Gestion Fiscale</h3>
+                <p class="mt-8 text-lg">
+                    Notre département juridique est conçus pour répondre aux besoins spécifiques de chaque client, qu'il s'agisse de PME, de grandes entreprises, ou de particuliers. <strong>Nous proposons une gamme complète de services allant de la simple déclaration fiscale à une planification fiscale complexe</strong>. Avec Fiduciaire Genevoise, vous bénéficiez d'une expertise pointue et d'un accompagnement sur mesure, adapté à vos besoins spécifiques. Que vous ayez besoin de conseils pour calculer votre charge fiscale, d'aide pour remplir vos déclarations, ou de représentation lors de contrôles fiscaux, notre équipe est là pour vous assister. Attention nous ne remplaçons pas le travail des avocats et n'avons pas vocation à vous représenter devant la justice le cas échéant.
+                </p>
+                <h3 class="mt-8 text-lg underline">Planification Fiscale : Calculer Vos Charges de Manière Stratégique</h3>
+                <p class="mt-8 text-lg">
+                    La planification fiscale est un processus stratégique qui permet de calculer les impôts payés par une entreprise ou un particulier tout en restant conforme aux lois en vigueur. <strong>Cela implique une analyse approfondie de votre situation financière actuelle, de vos objectifs futurs et des différentes options fiscales disponibles</strong>. Pour les entreprises, cela peut inclure des stratégies comme le choix de la structure juridique la plus favorable, la gestion des investissements pour calculer les damortissements fiscaux autorisés, ou l'utilisation de crédits d'impôt. Pour les particuliers, il peut s'agir de l'optimisation des revenus et de la gestion de la fortune. Nos experts en planification fiscale travaillent avec vous pour développer des stratégies personnalisées qui répondent à vos objectifs financiers tout en assurant une conformité totale avec les règlements fiscaux.
+                </p>
+                <h3 class="mt-8 text-lg underline">Impôt sur le Revenu et la Fortune : Maximisez Vos Avantages</h3>
+                <p class="mt-8 text-lg">
+                    L'imposition des revenus et de la fortune est l'un des aspects les plus importants de la fiscalité pour les particuliers. Il est essentiel de bien comprendre comment ces impôts sont calculés et quelles sont les déductions possibles pour calculer la base imposable des personnes physiques. Pour les particuliers, cela inclut la gestion des revenus imposables de votre activité dépendante ou indépendante, l'optimisation des déductions telles que les dons caritatifs ou les intérêts hypothécaires, et la planification de la succession.
+                </p>
+                <p class="mt-4 text-lg">
+                    Pour les entreprises, il s'agit de gérer les bénéfices, d'investir dans des actifs de manière fiscalement avantageuse suivant les amortissements et votre programme d'investissement, et de structurer la rémunération des dirigeants de manière adéquate. <strong>Nos services incluent une analyse détaillée de votre situation personnelle et professionelle</strong>.
+                </p>
+                <h3 class="mt-8 text-lg underline">Calcul de l’Imposition des Revenus et de la Fortune</h3>
+                <p class="mt-8 text-lg">
+                    <strong>Le calcul fiscal ne consiste pas seulement à calculer les impôts à court terme, mais aussi à élaborer une stratégie à long terme pour maximiser votre patrimoine et vos revenus</strong>. Cela implique une analyse continue de votre situation financière et l'ajustement de vos stratégies fiscales en fonction des changements législatifs et de vos objectifs personnels ou professionnels. Notre équipe d'experts vous aide à identifier les opportunités  dans chaque aspect de votre situation personnelle, que ce soit par le biais de placements financiers, de la gestion immobilière, ou de la planification de la retraite.
+                </p>
+                <p class="mt-4 text-lg">
+                    <span class="font-semibold underline">Exemple :</span> il est plus intéressant de renforcer les placement boursier sur des valeurs à fort gain en capitaux à titre personnel et de privilégier des valeurs à fort rendement de dividendes dans son plan sur obligataire de LPP ( 2ème pilier). La fiscalité sur les dividendes ne s'applique pas dans les plans LPP.
+                </p>
+                <h3 class="mt-8 text-lg underline">Comprendre les Règles Fiscales Locales : Le Droit Fiscal des Communes</h3>
+                <p class="mt-8 text-lg">
+                    Les règles fiscales peuvent varier considérablement d'une commune à l'autre, rendant la gestion fiscale plus complexe pour les entreprises et les particuliers. <strong>Chaque commune peut avoir ses propres taux d'imposition, exonérations, et règles spécifiques qui s'ajoutent aux lois fiscales nationales</strong>. Comprendre ces différences est crucial pour éviter les erreurs et les surprises désagréables. Nous vous aidons à naviguer dans ces complexités en vous fournissant des conseils adaptés à votre situation géographique, afin d'assurer une conformité totale et une gestion fiscale optimale.
+                </p>
+                <p class="mt-4 text-lg">
+                    A Genève par exemple, toutes les entreprises jusqu'au 1er janvier 2024 devaient payer une Taxe Pro communale. Cette taxe a été abolie et était basée sur le chiffre d'affaires de la société assujettie.
+                </p>
+                <h3 class="mt-8 text-lg underline">Conformité Fiscale Locale : Adapter Vos Pratiques aux Règles Communales</h3>
+                <p class="mt-8 text-lg">
+                    Respecter les règles fiscales locales est essentiel pour éviter les pénalités et les litiges. <strong>Nos experts en droit fiscal local vous accompagnent pour adapter vos pratiques fiscales aux spécificités des communes où vous êtes implanté</strong>. Cela inclut la gestion des déclarations fiscales locales, le calcul des taxes locales, et la représentation lors de contrôles fiscaux.
+                </p>
+                <p class="mt-4 text-lg">
+                    En assurant une conformité rigoureuse avec les régulations locales, vous pouvez non seulement éviter des problèmes juridiques, mais aussi profiter des opportunités fiscales spécifiques à votre région.
+                </p>
+                <h3 class="mt-8 text-lg underline">Formation en Droit Fiscal : Développez Vos Connaissances pour Mieux Gérer Vos Impôts</h3>
+                <p class="mt-8 text-lg">
+                    Une formation approfondie en droit fiscal <strong>est indispensable pour gérer efficacement vos impôts</strong>, que vous soyez un particulier ou un professionnel. Nous proposons des programmes de formation personnalisés qui vous permettent de développer une compréhension solide des principes fiscaux, des lois en vigueur, et des meilleures pratiques en matière de gestion fiscale.
+                </p>
+                <p class="mt-4 text-lg">
+                    Que vous soyez un dirigeant d'entreprise cherchant à améliorer vos compétences en matière de gestion fiscale ou un particulier souhaitant mieux comprendre vos obligations fiscales, nos formations sont conçues pour répondre à vos besoins.
+                </p>
+                <h3 class="mt-8 text-lg underline">Programmes de Formation Fiscale : Maîtriser le Droit Fiscal</h3>
+                <p class="mt-8 text-lg">
+                    Nos programmes de formation fiscale couvrent tous les aspects du droit fiscal, des bases aux applications les plus avancées. <strong>Ils sont spécialement conçus pour les dirigeants et les collaborateurs des PME et des grandes entreprises</strong>, leur permettant de gérer efficacement leurs obligations fiscales. Nos cours sont dispensés par des experts en fiscalité qui apportent des exemples pratiques et des études de cas pour rendre l'apprentissage aussi pertinent et applicable que possible.
+                </p>
+                <h3 class="mt-8 text-lg underline">Contactez-nous</h3>
+                <p class="mt-8 text-lg">
+                    <strong>Pour en savoir plus sur nos services fiscaux et découvrir comment nous pouvons vous aider à gérer votre fiscalité</strong>, n'hésitez pas à nous contacter. Que vous soyez une entreprise à la recherche de planification fiscale efficace ou un particulier souhaitant calculer sa fiscalité, notre équipe d'experts est à votre disposition pour vous fournir des solutions personnalisées et adaptées à vos besoins.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

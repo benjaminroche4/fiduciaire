@@ -55,4 +55,28 @@ class CompanyController extends AbstractController
     {
         return $this->render('company/faq.html.twig');
     }
+
+    #[Route('/services-fiduciaire/rh-et-gestion-des-salaires', name: 'app_rh')]
+    public function rhGestionSalaires(): Response
+    {
+        return $this->render('company/rh-gestion-salaires.html.twig');
+    }
+
+    #[Route('/services-fiduciaire/fiscalite', name: 'app_fiscalite')]
+    public function fiscalite(): Response
+    {
+        return $this->render('company/fiscalite.html.twig');
+    }
+
+    #[Route('/services-fiduciaire/administration-de-societes', name: 'app_admin_societes')]
+    public function adminSociete(): Response
+    {
+        return $this->render('company/administration-societe.html.twig');
+    }
+
+    #[Route('/services-fiduciaire/audit-et-controles', name: 'app_services_audit_controles')]
+    public function auditControle(): Response
+    {
+        return $this->render('company/audit-controles.html.twig');
+    }
 }
