@@ -31,3 +31,9 @@ dt{
 .font-second{
     font-family: Barlow, sans-serif;
 }
+
+@media (max-width: 320px) {
+    .phone-header {
+        display: none;
+    }
+}
