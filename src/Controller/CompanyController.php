@@ -79,4 +79,10 @@ class CompanyController extends AbstractController
     {
         return $this->render('company/audit-controles.html.twig');
     }
+
+    #[Route('/services-fiduciaire/gestion-des-debiteurs', name: 'app_gestion_debiteurs')]
+    public function gestionDebiteurs(): Response
+    {
+        return $this->render('company/gestion-debiteurs.html.twig');
+    }
 }
