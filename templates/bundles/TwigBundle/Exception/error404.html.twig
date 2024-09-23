@@ -9,10 +9,10 @@
             <p class="text-4xl font-semibold text-red-custom">404</p>
             <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Page non trouvée</h1>
             <p class="mt-6 text-base leading-7 text-gray-600">Désolé, nous n'avons pas pu trouver la page que vous recherchez.</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="{{ path('app_home') }}" class="rounded-md bg-main px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-second transition duration-200">Page d'accueil</a>
-                <a href="{{ path('app_contact') }}" class="text-sm rounded-lg font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-white transition duration-200">Nous contacter</a>
+            <div class="mt-10 flex items-center justify-center gap-x-4">
+                <a href="{{ path('app_contact') }}" class="text-sm rounded-full font-semibold px-3.5 py-2.5 text-gray-900 border-solid border border-main hover:bg-main hover:text-white transition duration-200">Nous contacter</a>
+                <a href="{{ path('app_home') }}" class="rounded-full bg-main px-3.5 py-2.5 text-sm font-semibold text-white border-main border hover:bg-transparent hover:text-main transition duration-200">Page d'accueil <span aria-hidden="true" class="ml-1">&rarr;</span></a>
             </div>
         </div>
-    </main>
+    </section>
 {% endblock %}

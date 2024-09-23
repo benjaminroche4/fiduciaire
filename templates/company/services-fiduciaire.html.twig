@@ -24,156 +24,409 @@
         <div class="mx-auto max-w-6xl px-6 lg:px-8">
             <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
                 <dl class="grid grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Administration de sociétés</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Dans un paysage juridique dynamique, nos administrateurs spécialisés en administration de sociétés vous guident dans la gouvernance
-                                de votre entreprise à Genève, Suisse. Nous abordons avec expertise les enjeux juridiques, facilitons les interactions avec les tiers et les administrations,
-                                et soutenons l'expansion de votre activité par l'intégration d'outils de pilotage et de gestion financière efficaces.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Création et domiciliation de sociétés</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion administrative courante</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des obligations fiscales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Conformité légale et réglementaire</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Représentation de l'entreprise</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                         <div class="mt-6">
                             <a href="{{ path('app_admin_societes') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Comptabilité</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Nos experts en comptabilité à Genève traitent minutieusement votre comptabilité générale pour générer des états financiers précis,
-                                conformes aux normes réglementaires cantonales et fédérales suisses. Nous assistons aussi nos clients dans l'implémentation d'outils de mesure de performance
-                                et dans la gestion efficace de la comptabilité analytique, assurant une vue d'ensemble et une analyse approfondie de la santé financière de votre entreprise.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Tenue des livres comptables</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des factures et paiements</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Préparation des bilans annuels</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Établissement des comptes de résultats</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Déclarations fiscales et gestion de la TVA</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                             <div class="mt-6">
                                 <a href="{{ path('app_comptabilite') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                             </div>
                         </dd>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Audit & Contrôles</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">L'audit de contrôle restreint, mené par nos réviseurs en Suisse, offre un examen financier ciblé pour évaluer les comptes annuels de votre entreprise,
-                                fournissant une opinion professionnelle fiable. Par ailleurs, notre service d'audit contractuel implique une analyse détaillée, réalisée par un expert, conformément à vos besoins spécifiques.
-                                Nos auditeurs sont dédiés à vous guider vers l'atteinte de vos objectifs financiers et réglementaires, assurant conformité et tranquillité d'esprit dans votre gestion d'entreprise.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Audit financier</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Audit interne</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Audit de conformité</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Évaluation des systèmes de contrôle interne</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Identification des risques financiers</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                         <div class="mt-6">
                             <a href="{{ path('app_services_audit_controles') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Gestion de TVA</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">
-                                Dès le lancement de votre activité entrepreneuriale, la reprise d'un commerce, ou l'ouverture d'une succursale en Suisse, vous devenez redevable de la TVA si vous anticipez un chiffre d'affaires dépassant
-                                100'000 francs dans l'année suivante. Nos spécialistes vous offrent un accompagnement sur mesure dans la gestion de la TVA, l'élaboration des décomptes, et la préparation des déclarations nécessaires, assurant
-                                conformité et optimisation fiscale pour votre entreprise.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Déclarations</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Calcul et liquidation</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Optimisation du traitement</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des taux applicables</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des régularisations</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Fiscalité</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Nos experts sont à vos côtés pour naviguer à travers les complexités des transactions et des projets d'entreprise, garantissant une adhérence rigoureuse aux règles fiscales actuelles, y compris les aspects
-                                liés à la TVA, les déclarations, les contrôles, et les audits. Nous offrons une assistance personnalisée pour vous aider à maximiser votre conformité fiscale et à optimiser vos stratégies financières. Que ce soit pour une planification
-                                fiscale stratégique, la gestion de la TVA, ou la préparation et révision de déclarations fiscales, notre équipe dédiée assure une guidance experte et approfondie,</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Déclarations fiscales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Optimisation et planification</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des obligations</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des régimes fiscaux</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Conseil en fiscalité internationale</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                         <div class="mt-6">
                             <a href="{{ path('app_fiscalite') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>RH et gestion des salaires</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Notre équipe spécialisée vous guide dans la rédaction de contrats de travail et la préparation des bulletins de salaire, offrant un conseil
-                                juridique solide en droit du travail. Nous vous assistons également dans toutes les démarches administratives nécessaires pour l'affiliation aux différentes caisses suisses (AVS, LPP, Maladie, Accident, Impôt à la source, etc.).
-                                De plus, nous prenons en charge la réalisation complète des déclarations salariales et de l'impôt à la source, vous assurant conformité et sérénité dans la gestion de votre personnel.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des contrats de travail</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Élaboration des fiches de paie</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Calcul des salaires et charges sociales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des absences et congés</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des cotisations aux assurances sociales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                         <div class="mt-6">
                             <a href="{{ path('app_rh') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Gestion des débiteurs</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Nos experts facilitent le règlement de vos créances, tout en protégeant vos relations clients. Nous optimisons le recouvrement avec des stratégies pré-juridiques, une gestion précise de la comptabilité débiteurs,
-                                et des rappels réguliers. Capables de gérer réquisitions de poursuite et procédures de continuation, nous assurons une gestion efficace et intégrale de vos créances.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des factures clients</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des relances de paiement</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Mise en place de plans de recouvrement</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des encaissements</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des litiges</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                         <div class="mt-6">
                             <a href="{{ path('app_gestion_debiteurs') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Gouvernance</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Nous offrons une vue externe pour une gouvernance d'entreprise équilibrée, incluant clôtures intermédiaires et consolidations pour une visibilité
-                                constante de vos affaires, suivi proactif de débiteurs et créanciers, et gestion de la trésorerie selon l'état des comptes actualisé, assurant une gestion optimale de votre entreprise.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Mise en place des politiques internes</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des bonnes pratiques de gouvernance</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des conseils d'administration</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Rédaction des procès-verbaux</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Respect des obligations légales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                     </div>
                 </dl>
-            </div>
-        </div>
-    </section>
-    <section class="bg-white pt-6 pb-12 lg:pb-24">
-        <div class="mx-auto max-w-6xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                <div class="max-w-lg justify-start">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Services comptables et audits financiers avec Fiduciaire Genevoise</h2>
-                </div>
-                <div class="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
-                    <div class="space-y-2">
-                        <p>Fiduciaire Genevoise se positionne en leader dans le domaine des services comptables et des audits financiers, répondant avec précision aux besoins spécifiques des entreprises suisses.
-                            Notre expertise englobe l'ensemble du spectre comptable, de la préparation des comptes annuels à l'exécution
-                            d'audits conformes aux normes IFRS et au respect du Code de commerce. Nous accompagnons activement les sociétés
-                            mères et leurs entités, garantissant une représentation exacte et fidèle de leur position financière,
-                            tout en valorisant leur patrimoine et en sécurisant les droits de leurs actionnaires.</p>
-                        <p>Notre démarche sur mesure simplifie le processus d'audit et de consolidation, en prenant en compte les aspects critiques tels que l'influence significative et le contrôle,
-                            qu'il soit exclusif ou partagé, sur les filiales. </p>
-                    </div>
-                    <div class="space-y-2">
-                        <p>Nous assurons une harmonisation et une uniformité parfaite des comptes consolidés, ce qui renforce la transparence financière et aide les groupes d'entreprises
-                            dans leurs décisions stratégiques. En collaboration étroite avec les commissaires aux comptes, nous validons
-                            la conformité et l'authenticité des données financières, augmentant ainsi la confiance entre les entreprises
-                            et leurs différents interlocuteurs.</p>
-                        <p>Opter pour Fiduciaire Genevoise signifie choisir un partenaire fiable pour la gestion comptable et financière, assurant à votre société un développement
-                            soutenu et une stabilité financière face aux enjeux économiques contemporains et à venir.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

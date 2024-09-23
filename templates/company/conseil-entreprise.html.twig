@@ -24,86 +24,211 @@
         <div class="mx-auto max-w-6xl px-6 lg:px-8">
             <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
                 <dl class="grid grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Services juridiques</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Les changements légaux au sein de votre entreprise ou de sa direction requièrent la rédaction de procès-verbaux et une réquisition d'inscription conformément
-                                à l'article 16 de l'ORC auprès de l'Office du registre du commerce. Nos équipes vous assistent dans la préparation et la transmission de toute la documentation juridique nécessaire à
-                                l'Office du registre du commerce, assurant la conformité de vos actes juridiques.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Constitution de sociétés, fondations et filiales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Modifications des statuts</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Rédaction et révision des contrats (RH, Assurances, Baux etc.)</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Accompagnement dans les négociations contractuelles</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des litiges</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Conseil en droit des sociétés</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Réorganisation & Restructuration</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Depuis 2004, la loi fédérale sur la fusion encadre les opérations de réorganisation et restructuration d'entreprises en Suisse, instaurant des procédures complexes. La neutralité fiscale est possible sous conditions spécifiques, offrant un cadre légal pour les transformations d'entreprise.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Analyse financière et audit de performance</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Élaboration de Business Plan</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Valorisation de sociétés</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Construction de plans de restructuration</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Audit pour réduction des coûts fixes et variables</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Conseil en stratégie</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Consolidation</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">
-                                Nous offrons un accompagnement spécialisé dans la consolidation financière et l'évaluation des structures organisationnelles des entreprises pour identifier les entités à consolider.
-                                Notre processus inclut l'identification et l'élimination des transactions intra-groupe, l'harmonisation des méthodes comptables, et la préparation des états financiers consolidés,
-                                permettant ainsi de fournir des conseils stratégiques éclairés.
-                            </p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des participations et filiales internationales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion de la consolidation intra-groupe</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Établissement des états financiers aux normes Swiss GAAP et IFRS</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion du Goodwill et Badwill</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
+                        </dd>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                            <h3>Filiale, Fondation et Holding</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Nous guidons nos clients dans l'établissement de filiales, fondations, ou holdings en Suisse, conseillant sur la forme juridique optimale et rédigeant les statuts
-                                en considérant les spécificités de chaque projet.
-                            </p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Création et gestion de filiales nationales et internationales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion des transferts intra-groupe</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Suivi des obligations légales et fiscales internationales</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Gestion fiscale des holdings de participation</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Stratégie d’intégration et de déploiement internationale</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Valorisation des actifs de fondation</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                     </div>
                 </dl>
-            </div>
-        </div>
-    </section>
-    <section class="bg-white pt-6 pb-12 lg:pb-24">
-        <div class="mx-auto max-w-6xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                <div class="max-w-lg justify-start">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Expertise avancée en comptabilité et consolidation financière</h2>
-                </div>
-                <div class="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
-                    <div class="space-y-2">
-                        <p>Fiduciaire Genevoise se distingue par son expertise en gestion comptable et consolidation financière, adaptée aux
-                            exigences des entreprises en Suisse. Notre savoir-faire couvre toute la palette de la comptabilité, des comptes
-                            annuels aux comptes consolidés, en conformité avec les normes IFRS et le Code de commerce. Nous soutenons les
-                            sociétés mères et leurs filiales, en assurant une représentation fidèle de leur situation financière, optimisant
-                            les capitaux propres et les droits de vote des actionnaires.</p>
-                        <p>Notre approche personnalisée facilite le processus de consolidation, tenant compte de l'influence notable et
-                            du contrôle exclusif ou conjoint au sein des participations. </p>
-                    </div>
-                    <div class="space-y-2">
-                        <p>Nous veillons à l'équivalence et à la cohérence des comptes consolidés, améliorant ainsi la transparence financière
-                            et la prise de décision stratégique pour les sociétés du groupe. En partenariat avec les commissaires aux
-                            comptes, nous établissons et vérifions la régularité et la sincérité des informations financières, renforçant
-                            ainsi la confiance des parties prenantes.</p>
-                        <p>Choisir Fiduciaire Genevoise, c'est opter pour une gestion comptable et financière de premier ordre, garantissant
-                            à votre entreprise une croissance durable et une solidité financière face aux défis économiques actuels et futurs.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

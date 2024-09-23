@@ -24,63 +24,106 @@
         <div class="mx-auto max-w-6xl px-6 lg:px-8">
             <div class="mx-auto py-12 lg:py-24 max-w-2xl lg:max-w-none">
                 <dl class="grid grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Contrôle restreint</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">Le contrôle restreint, un audit financier ciblé réalisé en Suisse par un réviseur qualifié, évalue vos comptes annuels pour fournir une opinion experte.
-                                Bien qu'extérieur à la clôture des comptes, cet audit est indispensable pour les entreprises optant volontairement pour cette vérification, garantissant conformité et transparence financière.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Révision des états financiers basé sur la NCR</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Vérification de la conformité des comptes</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Revue partielle du système de contrôle interne</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Audit limité des comptes de la société</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Évaluation restreinte des risques financiers</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                             <div class="mt-6">
                                 <a href="{{ path('app_controle_restreint') }}" class="text-sm font-semibold leading-6 text-main hover:text-second transition duration-200">En savoir plus <span aria-hidden="true">→</span></a>
                             </div>
                         </dd>
                     </div>
-                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6">
+                    <div class="flex flex-col sm:m-2 shadow-lg rounded-md bg-gray-50 p-6 hover:shadow-xl transition duration-100">
                         <dt class="font-main flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-custom">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                                <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
                             </svg>
                             <h3>Contrôle contractuel</h3>
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                            <p class="text-justify">L'audit contractuel est une mission spécialisée, réalisée par un expert sur demande d'une entreprise, pour examiner et analyser ses informations via des critères et méthodologies définis. Ce type de contrôle englobe l'audit financier,
-                                ainsi que les audits social, juridique, et industriel, offrant une évaluation précise et adaptée aux besoins spécifiques de l'entreprise.</p>
+                            <ul role="list" class="mt-4 space-y-4 font-second">
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Vérification de la conformité des contrats</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contrôle des clauses contractuelles</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Analyse du besoin en fonds de roulement (BF)</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Validation des conditions de paiement</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Évaluation des risques liés aux contrats</span>
+                                </li>
+                                <li class="flex gap-x-3 text-base">
+                                    <svg class="mt-0.5 h-5 w-5 flex-none text-base text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Contactez-nous pour avoir le détail complet</span>
+                                </li>
+                            </ul>
                         </dd>
                     </div>
                 </dl>
-            </div>
-        </div>
-    </section>
-    <section class="bg-white pt-6 pb-12 lg:pb-24">
-        <div class="mx-auto max-w-6xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                <div class="max-w-lg justify-start">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Excellence en audit et contrôle avec Fiduciaire Genevoise</h2>
-                </div>
-                <div class="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
-                    <div class="space-y-2">
-                        <p>Fiduciaire Genevoise se distingue dans le domaine des audits et contrôles en offrant des services
-                            de commissariat aux comptes et d'expertise-comptable à Genève. Notre équipe d'experts-comptables et d'auditeurs,
-                            forts de leur expérience en audit légal et comptable, s'engage à garantir la sincérité et la régularité des informations
-                            financières de votre entreprise. Nous réalisons des missions d'audit approfondies, centrées sur le contrôle interne et la
-                            certification des comptes, pour refléter une image fidèle de votre situation financière.</p>
-                        <p>Notre cabinet d'audit est spécialisé dans l'audit d'acquisition, l'audit interne, et les consolidés, assurant ainsi la régularité
-                            et la certification de vos états financiers. Grâce à nos procédures de contrôle rigoureuses et à notre capacité à émettre des certifications,
-                            nous contribuons à renforcer la confiance entre les entreprises et leurs parties prenantes. </p>
-                    </div>
-                    <div class="space-y-2">
-                        <p>Fiduciaire Genevoise, grâce à son expertise comptable et financière, vous accompagne dans la certification de vos
-                            comptes et dans l'amélioration continue de vos processus internes pour un pilotage efficace et stratégique de votre entreprise.</p>
-                        <p>Choisissez Fiduciaire Genevoise pour une approche d'audit sur mesure, répondant aux exigences spécifiques de votre entreprise et soutenant
-                            votre développement grâce à des informations financières certifiées et fiables. Nos auditeurs et commissaires aux comptes travaillent en étroite
-                            collaboration avec votre comité d'audit pour assurer une évaluation complète et précise, vous aidant ainsi à naviguer avec confiance dans
-                            le paysage économique complexe.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
