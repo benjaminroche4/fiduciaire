@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block robots %}index, follow{% endblock %}
-{% block title %}Créer une Société à Responsabilité Limitée en Suisse (SARL){% endblock %}
-{% block description %}Fiduciaire Genevoise vous accompagne dans la création de votre SARL en Suisse avec l'expertise des meilleurs spécialistes pour lancer ou développer votre activité.{% endblock %}
-{% block url %}{{ path('app_create_society_SARL') }}{% endblock %}
+{% block title %}Créer une Raison Individuelle en Suisse (RI){% endblock %}
+{% block description %}Fiduciaire Genevoise vous accompagne dans la création de votre Raison Individuelle (RI) en Suisse. Profitez de notre expertise pour démarrer votre activité en toute sérénité ou accélérer son développement.{% endblock %}
+{% block url %}{{ path('app_create_society_RI') }}{% endblock %}
 
-{% block ogTitle %}Fiduciaire Genevoise - Créer une Société à Responsabilité Limitée en Suisse (SARL){% endblock %}
-{% block ogUrl %}https://fiduciaire-genevoise.ch/creation-de-societe/societe-a-responsabilite-limitee{% endblock %}
+{% block ogTitle %}Fiduciaire Genevoise - Créer une Raison Individuelle en Suisse (RI){% endblock %}
+{% block ogUrl %}https://fiduciaire-genevoise.ch/creation-de-societe/raison-individuelle{% endblock %}
 {% block ogImage %}{{ asset('media/site/fiduciaire-genevoise-banniere.webp') }}{% endblock %}
 {% block ogImageAlt %}Fiduciaire Genevoise{% endblock %}
-{% block ogDescription %}Fiduciaire Genevoise vous accompagne dans la création de votre SARL en Suisse avec l'expertise des meilleurs spécialistes pour lancer ou développer votre activité.{% endblock %}
+{% block ogDescription %}Fiduciaire Genevoise vous accompagne dans la création de votre Raison Individuelle (RI) en Suisse. Profitez de notre expertise pour démarrer votre activité en toute sérénité ou accélérer son développement.{% endblock %}
 
 {% block body %}
     <section class="relative bg-white">
         <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
             <div class="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-24 lg:pt-24 xl:col-span-6">
                 <div class="mx-auto max-w-2xl lg:mx-0">
-                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:mt-5 sm:text-6xl">Créer une Société à Responsabilité Limitée</h1>
-                    <p class="mt-6 text-lg leading-8 text-gray-600">Fiduciaire Genevoise vous accompagne dans la création de votre Société à Responsabilité Limitée (SARL) en Suisse. Profitez de l'expertise des meilleurs spécialistes pour lancer ou développer votre activité.</p>
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:mt-5 sm:text-6xl">Créer une Raison Individuelle</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Fiduciaire Genevoise vous assiste dans la création de votre Raison Individuelle (RI) en Suisse. Appuyez-vous sur l’expertise de nos professionnels pour démarrer ou faire grandir votre projet.</p>
                     <div class="mt-10 flex items-center gap-x-4">
                         <a href="{{ path('app_contact') }}" class="flex items-center gap-x-3 text-sm rounded-full font-semibold bg-main px-5 py-4 text-white border-solid border border-main hover:bg-transparent hover:text-main transition duration-200">
                             <span class="relative flex h-3 w-3">
@@ -34,7 +34,7 @@
             </div>
             <div class="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
                 <div class="top-0 left-0 w-full h-full object-cover">
-                    <img class="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full" src="{{ asset('media/site/fiduciaire-creation-societe.webp') }}" alt="Fiduciaire Genevoise, Comptabilité, Audit & Fiscalité ">
+                    <img class="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full" src="{{ asset('media/site/fiduciaire-genevoise-creation-ri.jpg') }}" alt="Fiduciaire Genevoise, Comptabilité, Audit & Fiscalité ">
                 </div>
             </div>
         </div>
@@ -42,8 +42,8 @@
     <section class="bg-gray-50 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:text-center">
-                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Les avantages d'une SARL en Suisse</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-600">Combinée simplicité de gestion et protection des associés, idéale pour les entrepreneurs et les petites entreprises.</p>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Les avantages d'une RI en Suisse</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">La RI offre une gestion simplifiée et flexible, parfaitement adaptée aux entrepreneurs souhaitant lancer leur activité rapidement tout en gardant un contrôle total.</p>
             </div>
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                 <dl class="grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none md:grid-cols-2 lg:grid-cols-4">
@@ -56,7 +56,7 @@
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                             <p class="flex-auto">
-                                Le capital social requis pour créer une SARL est de 20'000 CHF, à déposer sur un compte de consignation. Ce montant sera libéré en totalité dès l'enregistrement de la société au Registre du Commerce.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
                             </p>
                         </dd>
                     </div>
@@ -69,7 +69,7 @@
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                             <p class="flex-auto">
-                                Les associés d'une SARL ne sont responsables qu'à hauteur de leurs apports ce qui protège leur patrimoine personnel en cas de difficultés financières de la société.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
                             </p>
                         </dd>
                     </div>
@@ -82,7 +82,7 @@
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                             <p class="flex-auto">
-                                Créer une SARL plutôt qu'une raison individuelle renforce la confiance des partenaires et des clients, en offrant une image plus sérieuse et professionnelle du dirigeant et de l'entreprise.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
                             </p>
                         </dd>
                     </div>
@@ -95,7 +95,7 @@
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                             <p class="flex-auto">
-                                Les formalités de gestion d'une SARL sont plus légères que celles d'une SA. Un dirigeant peut ainsi débuter avec une SARL et la transformer en SA plus tard, selon les besoins de gouvernance liés à la croissance.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
                             </p>
                         </dd>
                     </div>
@@ -107,19 +107,17 @@
         <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
             <div class="order-1 px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32">
                 <div class="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
-                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Qu'est-ce qu'une Société à Responsabilité Limitée ?</h2>
+                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Qu'est-ce qu'une Raison Individuelle ?</h2>
                     <p class="mt-6 text-lg leading-8 text-gray-600">
-                        Une Société à Responsabilité Limitée (SARL) est une forme juridique d'entreprise dans laquelle la responsabilité des associés est limitée à leurs apports au capital. Cela signifie que leur patrimoine personnel est protégé en cas de dettes ou de faillite de la société.                    </p>
+                        Une raison individuelle est une forme juridique d’entreprise en Suisse, où l'entreprise est détenue et <u>gérée par une seule personne</u>. Le propriétaire, appelé "indépendant", exerce une activité économique en son propre nom.
+                    </p>
                     <p class="mt-6 text-lg leading-8 text-gray-600">
-                        La SARL est particulièrement adaptée aux petites et moyennes entreprises, offrant une gestion flexible. Elle combine des avantages de la protection des associés avec une structure relativement simple à gérer.                    </p>
+                        Idéale pour les petites activités comme les artisans ou certaines professions libérales. Les entrepreneurs bénéficient d'un contrôle total sur leur entreprise et d'une imposition unique.
+                    </p>
                     <dl class="mt-16 grid max-w-xl gap-8 sm:mt-20 grid-cols-2 xl:mt-16">
                         <div class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6">
-                            <dt class="text-sm leading-6 text-gray-600">de capital social</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900">50'000 CHF</dd>
-                        </div>
-                        <div class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6">
-                            <dt class="text-sm leading-6 text-gray-600">associé minium</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900">01</dd>
+                            <dt class="text-sm leading-6 text-gray-600">par an (avant inscription au RC)</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900">100'000 CHF</dd>
                         </div>
                     </dl>
                 </div>
@@ -131,16 +129,12 @@
         <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
             <div class="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:px-8 lg:pt-32">
                 <div class="mx-auto max-w-2xl lg:max-w-lg">
-                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Facilité vos démarches d'ouverture de société</h2>
+                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Facilitez la création de votre entreprise.</h2>
                     <p class="mt-6 text-lg leading-8 text-gray-600">
-                        Faire appel à une fiduciaire pour la création de votre SARL en Suisse,
-                        c'est vous assurer d'un travail professionnel, rigoureux et conforme à
-                        la réglementation en vigueur.
+                        Faire appel à une fiduciaire pour créer votre Raison Individuelle (RI) en Suisse, c'est <u>garantir un accompagnement professionnel, rigoureux et conforme à la législation en vigueur</u>.
                     </p>
                     <p class="mt-6 text-lg leading-8 text-gray-600">
-                        Fiduciaire Genevoise <u>vous accompagne dans chaque
-                            étape de votre projet</u> pour vous garantir un lancement serein et réussi. Nous serions
-                        ravis de discuter de vos objectifs et de vous accueillir dans nos locaux à Genève.
+                        Fiduciaire Genevoise vous accompagne à chaque étape de la création de votre entreprise, proposant un démarrage simple et en règle. Nous serions ravis de vous accueillir dans nos locaux à Genève.
                     </p>
                     <div class="mt-10 flex items-center gap-x-6">
                         <a href="{{ path('app_contact') }}" class="text-sm rounded-full font-semibold bg-main px-3.5 py-2.5 text-white border-solid border border-main hover:bg-transparent hover:text-main transition duration-200">Contactez-nous</a>
@@ -216,12 +210,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                         <p>
-                            Combien de temps pour créer une SARL en Suisse ?
+                            Quelles sont les responsabilités du propriétaire d'une raison individuelle ?
                         </p>
                     </dt>
                     <dd class="mt-4 lg:col-span-7 lg:mt-0">
                         <p class="text-base leading-7 text-gray-600">
-                            L'inscription au registre du commerce prend <u>environ 10 jours</u>. La création d'une SARL en Suisse est donc un processus rapide et efficace.
+                            Le propriétaire d'une raison individuelle est personnellement <u>responsable de toutes les dettes de l'entreprise</u>.
+                            Cette responsabilité inclut le capital personnel du propriétaire, ce qui signifie qu'en cas de difficulté financière, ses biens personnels peuvent être mis en jeu.
                         </p>
                     </dd>
                 </div>
@@ -231,13 +226,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                         <p>
-                            Quelles sont les étapes clés du processus pour créer une SARL ?
+                            Dois-je inscrire ma raison individuelle au registre du commerce ?
                         </p>
                     </dt>
                     <dd class="mt-4 lg:col-span-7 lg:mt-0">
                         <p class="text-base leading-7 text-gray-600">
-                            Choisir sa raison sociale, rédiger les status de la SARL et nommer le gérant, effectuer l'inscription au registre du commerce, effectuer l'apport du capital social sur le compte bancaire de consignation, effectuer l'inscription à la TVA.
-                        </p>
+                            L'inscription au registre du commerce est obligatoire <u>si votre chiffre d'affaires annuel dépasse 100'000 CHF</u>. Cette inscription confère à votre entreprise une meilleure visibilité et crédibilité auprès de vos clients et partenaires commerciaux.                        </p>
                     </dd>
                 </div>
                 <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
@@ -246,13 +240,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                         <p>
-                            Quel est le capital social nécessaire à l'ouverture d'une SARL ?
+                            Quels sont les coûts associés à l'ouverture d'une raison individuelle ?
                         </p>
                     </dt>
                     <dd class="mt-4 lg:col-span-7 lg:mt-0">
                         <p class="text-base leading-7 text-gray-600">
-                            Le capital social nécessaire est de <u>20'000 CHF</u>.
-                        </p>
+                            Les coûts sont relativement bas comparés à d'autres formes d'entreprises comme la SARL ou la SA. Cependant, il faut prévoir des frais pour l’inscription au registre, l'ouverture d’un compte bancaire, et les assurances sociales.                        </p>
                     </dd>
                 </div>
                 <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
@@ -266,11 +259,12 @@
                     </dt>
                     <dd class="mt-4 lg:col-span-7 lg:mt-0">
                         <p class="text-base leading-7 text-gray-600">
-                            Il existe deux autres formes juridiques pour créer une entreprise en Suisse : <a href="{{ path('app_create_society_SA') }}" class="underline underline-offset-2 font-second font-medium">la Société Anonyme (SA)</a> et <a href="{{ path('app_create_society_RI') }}" class="underline underline-offset-2 font-second font-medium">la Raison Individuelle (RI)</a>.
+                            Il existe deux autres formes juridiques pour créer une entreprise en Suisse : <a href="{{ path('app_create_society_SA') }}" class="underline underline-offset-2 font-second font-medium">la Société Anonyme (SA)</a> et la <a href="{{ path('app_create_society_SARL') }}" class="underline underline-offset-2 font-second font-medium">Société à Responsabilité Limitée (SARL)</a>.
                         </p>
                     </dd>
                 </div>
             </dl>
         </div>
     </section>
+
 {% endblock %}
