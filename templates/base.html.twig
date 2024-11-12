@@ -23,6 +23,9 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            <script defer src="https://unpkg.com/@alpinejs/ui@3.14.3-beta.0/dist/cdn.min.js"></script>
+            <script defer src="https://unpkg.com/@alpinejs/focus@3.14.3/dist/cdn.min.js"></script>
+            <script defer src="https://unpkg.com/alpinejs@3.14.3/dist/cdn.min.js"></script>
         {% endblock %}
 
         <!-- Google Tag Manager -->
@@ -52,7 +55,6 @@
         </script>
         <!-- Start cookieyes banner -->
         <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/25c0311a0609a9eda69091a3/script.js"></script>
-        <!-- End cookieyes banner -->
     </head>
     <body class="mt-20">
         <!-- Google Tag Manager (noscript) -->
@@ -68,11 +70,204 @@
                         <span class="sr-only">Fiduciaire Genevoise</span>
                         <img class="h-7 w-auto" src="{{ asset('media/logo/logo.webp') }}" alt="Fiduciaire Genevoise Logo">
                     </a>
-                    <div class="hidden lg:flex lg:gap-x-6">
-                        <a href="{{ path('app_services_fiduciaire') }}" class="{% if app.request.attributes.get('_route') == 'app_services_fiduciaire' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Services fiduciaires</a>
-                        <a href="{{ path('app_audit_et_controles') }}" class="{% if app.request.attributes.get('_route') == 'app_audit_et_controles' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Audit & contrôles</a>
-                        <a href="{{ path('app_conseil_entreprise') }}" class="{% if app.request.attributes.get('_route') == 'app_conseil_entreprise' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Conseils entreprises</a>
-                        <a href="{{ path('app_corporate_finance') }}" class="{% if app.request.attributes.get('_route') == 'app_corporate_finance' %}underline{% endif %} text-sm font-semibold leading-6 text-gray-900 hover:text-second transition duration-400 hover:underline underline-offset-10 decoration-second">Corporate finance</a>
+                    <div x-popover:group class="hidden lg:flex lg:gap-x-8">
+                        <div class="relative" x-popover x-data x-menu>
+                            <button x-menu:button type="button" class="inline-flex text-gray-900 items-center gap-x-1 text-sm font-semibold leading-6 hover:text-gray-600 transition font-main duration-300" aria-expanded="false">
+                                <span>Nos services</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div x-cloak x-menu:items x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-3/4 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                <div class="w-screen max-w-sm flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
+                                    <div class="p-4">
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_services_fiduciaire') }}" class="font-semibold text-gray-900">
+                                                    Services fiduciaires
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Gestion experte pour vos besoins fiduciaires</p>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_audit_et_controles') }}" class="font-semibold text-gray-900">
+                                                    Audit & contrôles
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Audit rigoureux et contrôles de qualité</p>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_corporate_finance') }}" class="font-semibold text-gray-900">
+                                                    Corporate finance
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Stratégies financières pour vos projets</p>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_conseil_entreprise') }}" class="font-semibold text-gray-900">
+                                                    Conseil entreprise
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Accompagnement sur-mesure pour entreprises</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-popover:group class="hidden lg:flex lg:gap-x-8">
+                        <div class="relative" x-popover x-data x-menu>
+                            <button x-menu:button type="button" class="inline-flex text-gray-900 items-center gap-x-1 text-sm font-semibold leading-6 hover:text-gray-600 transition font-main duration-300" aria-expanded="false">
+                                <span>Ouvrir une société</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div x-cloak x-menu:items x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-3/4 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                <div class="w-screen max-w-sm flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
+                                    <div class="p-4">
+                                        <div class="group relative flex items-center gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_create_society_SA') }}" class="font-semibold text-gray-900">
+                                                    Créer une société anonyme (SA)
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 items-center rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_create_society_SARL') }}" class="font-semibold text-gray-900">
+                                                    Créer une société à responsabilité limitée (SARL)
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 items-center rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_create_society_RI') }}" class="font-semibold text-gray-900">
+                                                    Créer une raison individuelle (RI)
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-popover:group class="hidden lg:flex lg:gap-x-8">
+                        <div class="relative" x-popover x-data x-menu>
+                            <button x-menu:button type="button" class="inline-flex text-gray-900 items-center gap-x-1 text-sm font-semibold leading-6 hover:text-gray-600 transition font-main duration-300" aria-expanded="false">
+                                <span>À propos</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div x-cloak x-menu:items x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-3/4 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                <div class="w-screen max-w-sm flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
+                                    <div class="p-4">
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_a_propos') }}" class="font-semibold text-gray-900">
+                                                    Qui sommes-nous ?
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Votre partenaire de confiance en Suisse</p>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_faq') }}" class="font-semibold text-gray-900">
+                                                    FAQ
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Réponses rapides à toutes vos questions</p>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_blog') }}" class="font-semibold text-gray-900">
+                                                    Blog
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Conseils et actualités pour tout comprendre</p>
+                                            </div>
+                                        </div>
+                                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 transition duration-100">
+                                            <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="{{ path('app_newsletter') }}" class="font-semibold text-gray-900">
+                                                    Newsletter
+                                                    <span class="absolute inset-0"></span>
+                                                </a>
+                                                <p class="mt-1 text-gray-600">Restez informé avec notre newsletter hebdomadaire</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="hidden lg:flex gap-x-6">
@@ -130,48 +325,163 @@
                             <div class="mt-10 flow-root">
                                 <div class="-my-6 divide-y divide-gray-500/10">
                                     <div class="space-y-2 py-6">
-                                        <a href="{{ path('app_services_fiduciaire') }}" class="{% if app.request.attributes.get('_route') == 'app_services_fiduciaire' %}bg-gray-100{% endif %} flex relative items-center gap-x-2 -mx-3 rounded-lg px-3 py-2 hover:bg-gray-100 transition duration-200">
-                                            <svg class="h-5 w-5 flex-none text-red-custom"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
-                                            </svg>
-                                            <span class="text-base font-semibold leading-7 text-gray-900">Services fiduciaires</span>
-                                        </a>
-                                        <a href="{{ path('app_audit_et_controles') }}" class="{% if app.request.attributes.get('_route') == 'app_audit_et_controles' %}bg-gray-100{% endif %} flex relative items-center gap-x-2 -mx-3 rounded-lg px-3 py-2 hover:bg-gray-100 transition duration-200">
-                                            <svg class="h-5 w-5 flex-none text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
-                                            </svg>
-                                            <span class="text-base font-semibold leading-7 text-gray-900">Audit et contrôles</span>
-                                        </a>
-                                        <a href="{{ path('app_conseil_entreprise') }}" class="{% if app.request.attributes.get('_route') == 'app_conseil_entreprise' %}bg-gray-100{% endif %} flex relative items-center gap-x-2 -mx-3 rounded-lg px-3 py-2 hover:bg-gray-100 transition duration-200">
-                                            <svg class="h-5 w-5 flex-none text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                                            </svg>
-                                            <span class="text-base font-semibold leading-7 text-gray-900">Conseils entreprises</span>
-                                        </a>
-                                        <a href="{{ path('app_corporate_finance') }}" class="{% if app.request.attributes.get('_route') == 'app_corporate_finance' %}bg-gray-100{% endif %} flex relative items-center gap-x-2 -mx-3 rounded-lg px-3 py-2 hover:bg-gray-100 transition duration-200">
-                                            <svg class="h-5 w-5 flex-none text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-                                            </svg>
-                                            <span class="text-base font-semibold leading-7 text-gray-900">Corporate finance</span>
-                                        </a>
+                                        <div class="-mx-3" x-data="{ open: false }">
+                                            <button type="button" class="font-main flex w-full font-primary items-center justify-between rounded-lg px-3 py-2 pr-3.5 text-base font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false" @click="open = !open">
+                                                Nos services
+                                                <svg :class="{'rotate-180': open}" class="h-5 w-5 flex-none transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                                </svg>
+                                            </button>
+                                            <div class="mt-2 space-y-2" id="disclosure-1" x-show="open">
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_services_fiduciaire') }}" class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Services fiduciaires</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_audit_et_controles') }}" class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Audit & contrôles</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_corporate_finance') }}"  class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Corporate finance</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_conseil_entreprise') }}"  class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Conseil entreprise</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="-mx-3" x-data="{ open: false }">
+                                            <button type="button" class="font-main flex w-full font-primary items-center justify-between rounded-lg px-3 py-2 pr-3.5 text-base font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false" @click="open = !open">
+                                                Ouvrir une société
+                                                <svg :class="{'rotate-180': open}" class="h-5 w-5 flex-none transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                                </svg>
+                                            </button>
+                                            <div class="mt-2 space-y-2" id="disclosure-1" x-show="open">
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_create_society_SA') }}" class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Créer une société anonyme (SA)</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_create_society_SARL') }}" class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Créer une société à responsabilité limitée (SARL)</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_create_society_RI') }}"  class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-red-custom" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Créer une raison individuelle (RI)</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="-mx-3" x-data="{ open: false }">
+                                            <button type="button" class="font-main flex w-full font-primary items-center justify-between rounded-lg px-3 py-2 pr-3.5 text-base font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false" @click="open = !open">
+                                                À propos
+                                                <svg :class="{'rotate-180': open}" class="h-5 w-5 flex-none transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                                </svg>
+                                            </button>
+                                            <div class="mt-2 space-y-2" id="disclosure-1" x-show="open">
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_a_propos') }}" class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-auto text-gray-600 group-hover:text-red-custom"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Qui sommes-nous ?</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_faq') }}" class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-auto text-gray-600 group-hover:text-red-custom"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">FAQ</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_blog') }}"  class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-auto text-gray-600 group-hover:text-red-custom"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Blog</p>
+                                                    </a>
+                                                </div>
+                                                <div class="group block rounded-lg py-2 pl-6 pr-3 hover:bg-gray-50 items-center transition duration-100">
+                                                    <a href="{{ path('app_newsletter') }}"  class="flex gap-x-3 items-center">
+                                                        <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                            <svg class="h-6 w-auto text-gray-600 group-hover:text-red-custom"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                                                            </svg>
+                                                        </div>
+                                                        <p class="text-sm/7 font-semibold text-gray-900 font-main">Newsletter</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="space-y-2 py-6">
-                                        <div>
-                                            <a href="{{ path('app_a_propos') }}" class="text-base font-semibold leading-7 text-gray-900">À propos</a>
-                                        </div>
-                                        <div>
-                                            <a href="{{ path('app_faq') }}" class="text-base font-semibold leading-7 text-gray-900">FAQ</a>
-                                        </div>
-                                        <div>
-                                            <a href="{{ path('app_blog') }}" class="text-base font-semibold leading-7 text-gray-900">Blog</a>
-                                        </div>
-                                        <div>
-                                            <a href="{{ path('app_login') }}" class="text-base font-semibold leading-7 text-gray-900">Connexion</a>
-                                        </div>
+                                        <a href="{{ path('app_login') }}" class="{% if app.request.attributes.get('_route') == 'app_login' %}bg-gray-50{% endif %} flex items-center gap-x-3 rounded-lg -mx-3 px-3 py-2 hover:bg-gray-50 transition duration-200">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-auto">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            </svg>
+                                            <p class="text-base font-semibold leading-7 text-gray-900 font-main">Mon compte client</p>
+                                        </a>
                                     </div>
-                                    <div class="py-6 text-center gap-y-10">
+                                    <div class="py-6 text-center space-y-6">
                                         <a href="{{ path('app_contact') }}" class="mb-3 -mx-3 block rounded-full px-3 py-2.5 text-base font-semibold leading-7 text-white bg-main hover:bg-second border-solid border border-main hover:border-second transition duration-200">Contactez-nous <span aria-hidden="true" class="ml-2">&rarr;</span></a>
-                                        <a href="{{ path('app_devenir_client') }}" class="mb-3 -mx-3 block rounded-full px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 border-solid border border-main hover:bg-gray-100 transition duration-200">Devenir client</a>
+                                        <div class="font-medium text-base font-main tracking-wide items-center flex gap-x-2 justify-center text-gray-800">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-auto text-gray-800">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                                            </svg>
+                                            <p class="font-main text-center">Experts certifiés en Suisse</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -223,7 +533,7 @@
                     <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                         <div class="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 class="text-sm font-semibold leading-6 text-white">Services</h3>
+                                <h3 class="text-sm font-semibold leading-6 text-white">Nos services</h3>
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
                                         <a href="{{ path('app_services_fiduciaire') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Services fiduciaires</a>
@@ -240,13 +550,26 @@
                                 </ul>
                             </div>
                             <div class="mt-10 md:mt-0">
-                                <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
+                                <h3 class="text-sm font-semibold leading-6 text-white">Ouvrir une societé</h3>
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
-                                        <a href="{{ path('app_a_propos') }}" class="text-sm leading-6 text-gray-300 hover:text-white">À propos</a>
+                                        <a href="{{ path('app_create_society_SA') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Créer une SA</a>
                                     </li>
                                     <li>
-                                        <a href="{{ path('app_contact') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Contactez-nous</a>
+                                        <a href="{{ path('app_create_society_SARL') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Créer une SARL</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_create_society_RI') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Créer une RI</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold leading-6 text-white">À propos</h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li>
+                                        <a href="{{ path('app_a_propos') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Qui sommes-nous ?</a>
                                     </li>
                                     <li>
                                         <a href="{{ path('app_faq') }}" class="text-sm leading-6 text-gray-300 hover:text-white">FAQ</a>
@@ -254,46 +577,37 @@
                                     <li>
                                         <a href="{{ path('app_blog') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a>
                                     </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
-                                <h3 class="text-sm font-semibold leading-6 text-white">Client</h3>
-                                <ul role="list" class="mt-6 space-y-4">
-                                    {% if app.user %}
-                                        <li>
-                                            <a href="{{ path('app_admin_dashboard') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Mon compte</a>
-                                        </li>
-                                    {% else %}
-                                        <li>
-                                            <a href="{{ path('app_login') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Connexion</a>
-                                        </li>
-                                    {% endif %}
-                                    <li>
-                                        <a href="{{ path('app_devenir_client') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Devenir client</a>
-                                    </li>
                                     <li>
                                         <a href="{{ path('app_newsletter') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Newsletter</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="mt-10 md:mt-0">
-                                <h3 class="text-sm font-semibold leading-6 text-white">Légal</h3>
+                                <h3 class="text-sm font-semibold leading-6 text-white">Fiduciaires</h3>
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
-                                        <a href="{{ path('app_mentions_legales') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Mentions légales</a>
+                                        <a href="{{ path('app_office_geneva') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Genève</a>
                                     </li>
                                     <li>
-                                        <a href="{{ path('app_donnees_personnelles') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Données personnelles</a>
+                                        <a href="{{ path('app_office_lausanne') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Lausanne</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('app_office_bale') }}" class="text-sm leading-6 text-gray-300 hover:text-white">Bâle</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between gap-x-3 mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p class="text-xs leading-5 text-gray-400">&copy; {{ 'now' | date('Y') }} FG Fiduciaire Genevoise SA, Fiduciaire à Genève. Tous droits réservés. <a href="{{ path('app_site_map') }}" class="font-second">Sitemap</a></p>
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-x-3 mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 space-y-5 sm:space-y-0">
+                    <div class="items-center">
+                        <p class="text-xs leading-5 text-gray-400">&copy; {{ 'now' | date('Y') }} FG Fiduciaire Genevoise SA, Fiduciaire à Genève. Tous droits réservés.</p>
+                        <div class="space-x-2">
+                            <a href="{{ path('app_site_map') }}" class="font-second text-gray-400 text-xs leading-5">Sitemap</a>
+                            <a href="{{ path('app_mentions_legales') }}" class="font-second text-gray-400 text-xs leading-5">Mentions légales</a>
+                            <a href="{{ path('app_donnees_personnelles') }}" class="font-second text-gray-400 text-xs leading-5">Données personnelles</a>
+                        </div>
+                    </div>
                     <div>
                         <a href="https://www.linkedin.com/company/fiduciaire-genevoise/" target="_blank">
                             <svg class="h-7 w-7" viewBox="0 0 206 206" fill="none" xmlns="http://www.w3.org/2000/svg">
