@@ -17,7 +17,7 @@ class OfficeController extends AbstractController
     #[Route('/fiduciaire/lausanne', name: 'app_office_lausanne')]
     public function officeLausanne(): Response
     {
-        return $this->render('office/office_geneva.html.twig');
+        return $this->render('office/office_lausanne.html.twig');
     }
 
     #[Route('/fiduciaire/bale', name: 'app_office_bale')]
