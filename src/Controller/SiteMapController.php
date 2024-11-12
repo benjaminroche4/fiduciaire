@@ -18,7 +18,8 @@ class SiteMapController extends AbstractController
     #[Route('/sitemap', name: 'app_site_map')]
     public function sitemap(): Response
     {
-        $posts = $this->postsRepository->findAll();
+        //find all by order by date
+        $posts = $this->postsRepository->findBy([], ['createdAt' => 'DESC']);
 
         return $this->render('site_map/index.html.twig', [
             'posts' => $posts,

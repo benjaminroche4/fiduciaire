@@ -143,8 +143,11 @@
                 <div class="mt-8 px-6">
                     <ul class="list-disc space-y-4">
                         {% for post in posts %}
-                            <li>
-                                <a href="{{ path('app_blog_post', {'slug': post.slug }) }}" class="text-lg font-second">{{ post.title }}</a>
+                            <li class="text-lg">
+                                <a href="{{ path('app_blog_post', {'slug': post.slug }) }}" class="font-secondary text-gray-800 hover:text-gray-600 transition duration-100">
+                                    {{ post.title }}
+                                </a>
+                                <time datetime="{{ post.createdAt | date('d F Y') }}" class="capitalize text-gray-400 text-base">{{ post.createdAt | date('d F Y') | format_date(locale='fr') }}</time>
                             </li>
                         {% endfor %}
                     </ul>
