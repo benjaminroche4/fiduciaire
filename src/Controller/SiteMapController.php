@@ -15,7 +15,7 @@ class SiteMapController extends AbstractController
     {
     }
 
-    #[Route('/sitemap', name: 'app_site_map')]
+    #[Route('/sitemap', name: 'app_site_map', options: ['sitemap' => ['priority' => 0.2]])]
     public function sitemap(): Response
     {
         //find all by order by date

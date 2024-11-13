@@ -15,7 +15,7 @@ class HomeController extends AbstractController
     {
     }
 
-    #[Route('/', name: 'app_home')]
+    #[Route('/', name: 'app_home', options: ['sitemap' => ['priority' => 1]])]
     public function home(): Response
     {
         $posts = $this->postsRepository->findLastThree();

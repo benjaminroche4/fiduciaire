@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CustomerController extends AbstractController
 {
-    #[Route('/devenir-client', name: 'app_devenir_client')]
+    #[Route('/devenir-client', name: 'app_devenir_client', options: ['sitemap' => ['priority' => 0.6]])]
     public function devenirClient(Request $request, EntityManagerInterface $entityManager, MailerInterface $mailer, LoggerInterface $logger): Response
     {
         $contact = new Customer();

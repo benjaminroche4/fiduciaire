@@ -2,27 +2,46 @@
 
 namespace App\Controller;
 
+use App\Repository\PostsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class OfficeController extends AbstractController
 {
-    #[Route('/fiduciaire/geneve', name: 'app_office_geneva')]
+    public function __construct(
+        private readonly PostsRepository $postsRepository
+    )
+    {
+    }
+
+    #[Route('/fiduciaire/geneve', name: 'app_office_geneva', options: ['sitemap' => ['priority' => 0.7]])]
     public function officeGeneva(): Response
     {
-        return $this->render('office/office_geneva.html.twig');
+        $posts = $this->postsRepository->findLastThree();
+
+        return $this->render('office/office_geneva.html.twig', [
+            'posts' => $posts,
+        ]);
     }
 
-    #[Route('/fiduciaire/lausanne', name: 'app_office_lausanne')]
+    #[Route('/fiduciaire/lausanne', name: 'app_office_lausanne', options: ['sitemap' => ['priority' => 0.7]])]
     public function officeLausanne(): Response
     {
-        return $this->render('office/office_lausanne.html.twig');
+        $posts = $this->postsRepository->findLastThree();
+
+        return $this->render('office/office_lausanne.html.twig', [
+            'posts' => $posts,
+        ]);
     }
 
-    #[Route('/fiduciaire/bale', name: 'app_office_bale')]
+    #[Route('/fiduciaire/bale', name: 'app_office_bale', options: ['sitemap' => ['priority' => 0.7]])]
     public function officeBale(): Response
     {
-        return $this->render('office/office_bale.html.twig');
+        $posts = $this->postsRepository->findLastThree();
+
+        return $this->render('office/office_bale.html.twig', [
+            'posts' => $posts,
+        ]);
     }
 }

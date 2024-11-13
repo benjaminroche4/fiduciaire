@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class NewsletterController extends AbstractController
 {
-    #[Route('/newsletter', name: 'app_newsletter')]
+    #[Route('/newsletter', name: 'app_newsletter', options: ['sitemap' => ['priority' => 0.7]])]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $newsletter = new Newsletter();
